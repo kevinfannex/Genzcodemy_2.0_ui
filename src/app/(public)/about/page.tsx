@@ -1,6 +1,5 @@
-﻿import OriginStory from "@/components/about/OriginStory";
+import OriginStory from "@/components/about/OriginStory";
 import MissionStatement from "@/components/about/MissionStatement";
-import TeamGrid from "@/components/about/TeamGrid";
 import StatsBand from "@/components/about/StatsBand";
 import HowWereDifferent from "@/components/about/HowWereDifferent";
 import ValuesChecklist from "@/components/about/ValuesChecklist";
@@ -27,7 +26,7 @@ export default function AboutPage() {
           >
             About<br />
             <i className="not-italic text-[#f5c518]"
-             style={{ fontFamily: "var(--font-gugi)" }}>GENZCODEMY.</i>
+              style={{ fontFamily: "var(--font-gugi)" }}>GENZCODEMY.</i>
           </h1>
         </div>
       </section>
@@ -38,9 +37,7 @@ export default function AboutPage() {
       {/* 2. Mission statement */}
       <MissionStatement />
 
-      {/* 3. Team cards */}
-      <TeamGrid />
-
+      
       {/* 4. Animated stats */}
       <StatsBand />
 
