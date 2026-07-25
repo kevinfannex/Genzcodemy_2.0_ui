@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -109,6 +109,24 @@ function TeamCard({ member }: { member: (typeof TEAM)[0] }) {
 }
 
 export default function TeamGrid() {
+  return (
+    <section className="border-b-2 border-[#1a1a1a] bg-white px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50">
+          {/* team.json */}
+        </p>
+        <h2 className="mb-12 text-4xl font-black md:text-5xl">
+          The people <span className="not-italic text-[#f5c518]">behind it</span>.
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          {TEAM.map((m) => (
+            <TeamCard key={m.name} member={m} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
   // return (
   //   <section className="border-b-2 border-[#1a1a1a] bg-white px-6 py-24">
   //     <div className="mx-auto max-w-6xl">
