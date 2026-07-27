@@ -1,74 +1,100 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
 const CARDS = [
   {
-    // Card 1 � terminal simulator style
-    label: "internships",
-    title: "Internships",
-    bg: "bg-[#0d1117]",
-    border: "border-[#30a14e]",
-    shadow: "shadow-[8px_8px_0px_#30a14e]",
-    textColor: "text-[#30a14e]",
-    content: (
-      <div className="font-mono text-sm space-y-1.5 mt-2">
-        <p className="text-[#30a14e]">$ genz apply --track data-analytics</p>
-        <p className="text-white/50">Connecting to partner network...</p>
-        <p className="text-[#30a14e]">? 12 active internship slots found</p>
-        <p className="text-white/50">Filtering by your skill profile...</p>
-        <p className="text-[#30a14e]">? 6 matches. Interview scheduled.</p>
-      </div>
-    ),
-  },
-  {
-    // Card 2 � dark neon / referral
-    label: "referrals",
-    title: "Placement Referrals",
-    bg: "bg-[#0a0a0f]",
-    border: "border-[#f5c518]",
-    shadow: "shadow-[8px_8px_0px_rgba(245,197,24,0.4)]",
-    textColor: "text-[#f5c518]",
-    content: (
-      <div className="space-y-3 mt-2">
-        <p className="font-mono text-xs text-[#f5c518]/60 uppercase tracking-widest">
-          direct_referrals.json
-        </p>
-        {["Razorpay", "Meesho", "Zepto", "CRED", "Groww"].map((co) => (
-          <div
-            key={co}
-            className="flex items-center justify-between border border-[#f5c518]/30 px-3 py-1.5"
-          >
-            <span className="font-bold text-white text-sm">{co}</span>
-            <span className="font-mono text-[10px] text-[#000] bg-[#f5c518] px-1.5 py-0.5 font-bold uppercase tracking-widest">HIRING</span>
-          </div>
-        ))}
-      </div>
-    ),
-  },
-  {
-    // Card 3 � yellow checklist
-    label: "study-plans",
-    title: "Study Plans",
-    bg: "bg-[#f5c518]",
-    border: "border-[#1a1a1a]",
+    id: "card-1",
+    topLabelLeft: "SUPPORT 01",
+    topLabelRight: "INTERNSHIP",
+    title: "How do I get real experience before my first job?",
+    bg: "bg-white",
+    border: "border-2 border-[#1a1a1a]",
     shadow: "shadow-[8px_8px_0px_#1a1a1a]",
-    textColor: "text-[#1a1a1a]",
+    topTextColor: "text-[#1a1a1a]/50",
+    titleColor: "text-[#1a1a1a]",
     content: (
-      <ul className="space-y-3 mt-2">
-        {[
-          "Week-by-week structured curriculum",
-          "Daily 2-hr async video + exercises",
-          "Live mentor Q&A every Saturday",
-          "Peer review on every milestone",
-          "Career prep sprint in final 2 weeks",
-        ].map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm font-bold leading-snug">
-            <span className="mt-0.5 text-xl leading-none">?</span>
-            {item}
-          </li>
-        ))}
-      </ul>
+      <>
+        <div className="mt-6 border-2 border-[#1a1a1a] bg-[#f4f4f4] p-5 space-y-3">
+          {[
+            "100% Internship Guarantee",
+            "Resume & LinkedIn Optimized",
+            "Mock interviews, live feedback",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3 font-mono text-xs font-bold text-[#1a1a1a]">
+              <span className="flex h-5 w-5 items-center justify-center bg-[#30a14e] text-white text-[10px] leading-none border-2 border-[#1a1a1a]">✓</span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm font-medium leading-relaxed text-[#1a1a1a]/70">
+          A structured internship plan that checks your readiness and places you with our 100+ partners. You build proof before you ever need it.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "card-2",
+    topLabelLeft: "SUPPORT 02",
+    topLabelRight: "PLACEMENT",
+    title: "Why does my resume keep getting rejected?",
+    bg: "bg-[#1a1a1a]",
+    border: "border-2 border-[#1a1a1a]",
+    shadow: "shadow-[8px_8px_0px_#f5c518] md:scale-105 z-10",
+    topTextColor: "text-[#f5c518]/70",
+    titleColor: "text-white",
+    content: (
+      <>
+        <div className="mt-6 border-2 border-[#333] bg-[#242424] p-5">
+          <div className="space-y-4">
+            {["ATS Resume", "Profile Visibility Boost", "Naukri Manager"].map((item) => (
+              <div key={item} className="flex items-center justify-between font-mono text-xs font-bold text-white/80">
+                <span>{item}</span>
+                <span className="h-3 w-3 border-2 border-[#1a1a1a] bg-[#30a14e] shadow-[2px_2px_0px_#1a1a1a]"></span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 pt-4 border-t-2 border-[#333] font-mono text-[10px] font-black text-[#f5c518] tracking-widest uppercase">
+            50+ companies &middot; Direct referrals
+          </div>
+        </div>
+        <p className="mt-6 text-sm font-medium leading-relaxed text-white/70">
+          A tool that reads your resume against a real job and shows you what&apos;s missing. You fix it, we submit it to 50+ companies directly.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "card-3",
+    topLabelLeft: "BONUS 03",
+    topLabelRight: "SUPPORT",
+    title: "How do I prepare for one specific company?",
+    bg: "bg-[#f5c518]",
+    border: "border-2 border-[#1a1a1a]",
+    shadow: "shadow-[8px_8px_0px_#1a1a1a]",
+    topTextColor: "text-[#1a1a1a]/60",
+    titleColor: "text-[#1a1a1a]",
+    content: (
+      <>
+        <div className="mt-6 border-2 border-[#1a1a1a] bg-white p-5 space-y-3">
+          {[
+            "Fetch job openings",
+            "Filter role",
+            "Score fit",
+            "Draft email",
+            "Tag row",
+            "Schedule task",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3 font-mono text-xs font-bold text-[#1a1a1a]">
+              <span className="h-3 w-3 border-2 border-[#1a1a1a] bg-[#1a1a1a]"></span>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm font-bold leading-relaxed text-[#1a1a1a]/80">
+          A tool that takes any job and makes a study plan just for it. You make it yourself, with 1 year of career mentorship guiding you.
+        </p>
+      </>
     ),
   },
 ];
@@ -77,31 +103,38 @@ export default function CareerLaunchpad() {
   return (
     <section className="border-b-2 border-[#1a1a1a] bg-white px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50 font-bold">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#1a1a1a]/50 font-bold md:text-xs">
           // career_launchpad
         </p>
-        <h2 className="mb-14 text-4xl font-black md:text-5xl">
+        <h2 className="mb-14 text-3xl font-black md:text-5xl">
           We don&apos;t just teach.{" "}
           <i className="not-italic text-[#f5c518] underline decoration-[#1a1a1a]/20">We place.</i>
         </h2>
 
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 items-center">
           {CARDS.map((card, i) => (
             <motion.div
-              key={card.label}
+              key={card.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className={`group border-2 ${card.border} ${card.bg} ${card.shadow} p-8 transition-transform hover:-translate-y-2`}
+              className={`group flex flex-col justify-between ${card.border} ${card.bg} ${card.shadow} rounded-2xl p-8 transition-transform hover:-translate-y-2 h-full`}
             >
-              <p className={`mb-4 font-mono text-xs font-bold uppercase tracking-widest ${card.textColor}`}>
-                {card.label}
-              </p>
-              <h3 className={`mb-5 text-2xl font-black ${card.textColor}`}>
-                {card.title}
-              </h3>
-              {card.content}
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <p className={`font-mono text-[10px] font-bold uppercase tracking-widest ${card.topTextColor}`}>
+                    {card.topLabelLeft}
+                  </p>
+                  <p className={`font-mono text-[10px] font-bold uppercase tracking-widest ${card.topTextColor}`}>
+                    {card.topLabelRight}
+                  </p>
+                </div>
+                <h3 className={`text-2xl font-black ${card.titleColor} leading-tight`}>
+                  {card.title}
+                </h3>
+                {card.content}
+              </div>
             </motion.div>
           ))}
         </div>

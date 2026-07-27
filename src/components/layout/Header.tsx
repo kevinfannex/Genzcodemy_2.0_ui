@@ -2,6 +2,7 @@
 
 import { useAuth } from "@/lib/auth/AuthContext";
 import Link from "next/link";
+import StaggeredMenu from "./StaggeredMenu";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -14,6 +15,19 @@ const NAV_LINKS = [
 export default function Header() {
   const { user, loading } = useAuth();
 
+  const menuItems = NAV_LINKS.map((link) => ({
+    label: link.label,
+    ariaLabel: link.label,
+    link: link.href,
+  }));
+
+  const socialItems = [
+    {
+      label: user ? "Dashboard" : "Log in",
+      link: user ? "/dashboard" : "/login",
+    },
+  ];
+
   return (
     <header className="sticky top-0 z-40 border-b-2 border-[#1a1a1a] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -21,6 +35,7 @@ export default function Header() {
           GENZCODEMY<span className="text-[#f5c518]">.</span>
         </Link>
 
+        {/* Desktop Nav */}
         <nav className="hidden gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
@@ -33,14 +48,34 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Desktop Auth Button */}
         {!loading && (
-          <Link
-            href={user ? "/dashboard" : "/login"}
-            className="border-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-2 text-sm font-bold text-white shadow-[4px_4px_0px_#f5c518] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
-          >
-            {user ? "Dashboard" : "Log in"}
-          </Link>
+          <div className="hidden md:block">
+            <Link
+              href={user ? "/dashboard" : "/login"}
+              className="border-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-2 text-sm font-bold text-white shadow-[4px_4px_0px_#f5c518] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+            >
+              {user ? "Dashboard" : "Log in"}
+            </Link>
+          </div>
         )}
+
+        {/* Mobile Menu */}
+        <div className="md:hidden flex items-center justify-center">
+          <StaggeredMenu
+            isFixed={true}
+            position="right"
+            items={menuItems}
+            socialItems={socialItems}
+            displaySocials={true}
+            displayItemNumbering={true}
+            menuButtonColor="#1a1a1a"
+            openMenuButtonColor="#1a1a1a"
+            changeMenuColorOnOpen={false}
+            colors={["#f5c518", "#1a1a1a"]}
+            accentColor="#f5c518"
+          />
+        </div>
       </div>
     </header>
   );

@@ -56,6 +56,22 @@ export let MOCK_FORMS: AdminFormListItem[] = [
   }
 ];
 
+export const MOCK_FORM_DETAILS: Record<string, CreateFormInput> = {
+  "form-1": {
+    title: "Course Feedback Survey",
+    description: "Please let us know your thoughts on the recent course.",
+    visibility: "all_students",
+    fields: [
+      {
+        label: "Your Feedback",
+        field_type: "long_text",
+        is_required: true,
+        order_index: 0,
+      }
+    ]
+  }
+};
+
 export const adminStudentsApi = {
   list: async (params: { search?: string; page?: number; limit?: number } = {}) => {
     return {
@@ -133,6 +149,7 @@ export const adminFormsApi = {
       created_at: new Date().toISOString(),
     };
     MOCK_FORMS.unshift(newForm);
+    MOCK_FORM_DETAILS[newForm.id] = input;
     return { id: newForm.id, ...input };
   },
 
@@ -142,12 +159,16 @@ export const adminFormsApi = {
       form.title = input.title;
       form.visibility = input.visibility;
     }
+    MOCK_FORM_DETAILS[id] = input;
     return { id, ...input };
   },
 
   remove: async (id: string) => {
     const idx = MOCK_FORMS.findIndex(f => f.id === id);
-    if (idx > -1) MOCK_FORMS.splice(idx, 1);
+    if (idx > -1) {
+      MOCK_FORMS.splice(idx, 1);
+      delete MOCK_FORM_DETAILS[id];
+    }
     return { success: true };
   },
 

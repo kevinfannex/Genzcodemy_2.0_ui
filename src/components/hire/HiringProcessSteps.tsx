@@ -27,12 +27,12 @@ const STEPS = [
 
 export default function HiringProcessSteps() {
   return (
-    <section className="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] px-6 py-20">
+    <section className="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-white/30">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/30 md:text-xs">
           // hiring_process.sh
         </p>
-        <h2 className="mb-14 text-4xl font-black text-white md:text-5xl">
+        <h2 className="mb-10 text-3xl font-black text-white md:mb-14 md:text-5xl">
           How it{" "}
           <i className="not-italic text-[#f5c518]">works</i>.
         </h2>

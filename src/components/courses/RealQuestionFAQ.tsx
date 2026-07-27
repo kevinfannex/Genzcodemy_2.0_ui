@@ -6,24 +6,24 @@ import { useRouter } from "next/navigation";
 
 const FAQS = [
   {
-    q: "Do I need prior experience to join?",
-    a: "No. We start from the absolute basics. If you can open a browser and type, you're ready. The only prerequisite is the willingness to sit and work through problems.",
+    q: "What if I don't have any technical experience?",
+    a: "You don't need prior experience to begin. We start with the fundamentals and guide you step by step towards building practical, industry-ready skills.",
   },
   {
-    q: "How is this different from YouTube or Udemy?",
-    a: "You get a mentor who reviews your actual work, a cohort of peers to debug with, and a deadline that forces you to ship. Free tutorials can't replicate accountability.",
+    q: "Will I get to work on real-world projects?",
+    a: "Yes. Practical learning is a key part of the journey, helping you apply your knowledge to projects based on real industry scenarios.",
   },
   {
-    q: "What happens if I fall behind?",
-    a: "You get access to all recordings and can self-pace within reason. Mentors flag students who go dark and check in personally � we've seen people catch up in a single weekend.",
+    q: "Are there job opportunities for freshers?",
+    a: "Yes. Companies are actively looking for skilled professionals across data, technology, and development roles. We help you prepare for relevant career opportunities.",
   },
   {
-    q: "Is the job placement guaranteed?",
-    a: "We don't make guarantees � anyone who does is lying. What we do: referrals to our hiring partners, portfolio reviews, mock interviews, and a network of ~600 alumni who've gone before you.",
+    q: "What if I find the concepts difficult to understand??",
+    a: "You won't have to learn alone. Trainers and mentors will guide you, clarify your doubts, and help you progress at a comfortable pace.",
   },
   {
-    q: "Can I pay in installments?",
-    a: "Yes. We offer a 2-instalment plan (50% before batch starts, 50% at week 6). Reach out via the contact page and we'll set it up.",
+    q: "What happens after I complete the course?",
+    a: "Your journey continues with career guidance, interview preparation, and placement support to help you move towards the right opportunity.",
   },
 ];
 

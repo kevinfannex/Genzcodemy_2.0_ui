@@ -213,19 +213,19 @@ export default function Footer() {
           </div>
         </div>
         {/* Large watermark text */}
-        <div className="mt-12 overflow-hidden select-none pointer-events-none">
+        <div className="mt-8 overflow-hidden select-none pointer-events-none w-full flex justify-center md:mt-12">
           <p
             className="text-center uppercase leading-none tracking-tighter font-mono text-white"
             style={{
               fontFamily: "var(--font-gugi), sans-serif",
-                fontSize: "clamp(5rem, 15vw, 14rem)",
-                color: "rgba(255, 255, 255, 0.06)",
-                whiteSpace: "nowrap",
-              }}
-            >
-              GENZCODEMY
-            </p>
-          </div>
+              fontSize: "clamp(3rem, 16vw, 20rem)",
+              color: "rgba(255, 255, 255, 0.2)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            GENZCODEMY
+          </p>
+        </div>
       </footer>
     </section>
   );

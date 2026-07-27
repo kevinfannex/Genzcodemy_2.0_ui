@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,55 +8,41 @@ import { motion, AnimatePresence } from "framer-motion";
 const CURRICULUM: Record<string, { module: string; weeks: string[] }[]> = {
   "data-analytics": [
     {
-      module: "Excel for Data Analysis",
+      module: "Excel for Data Analysis:",
       weeks: [
-        "Week 1: SELECT, WHERE, JOINs, and aggregate functions",
-        "Week 2: Subqueries, CTEs, and window functions",
-        "Week 3: Indexes, query optimisation, real datasets",
+        " Formulas (VLOOKUP, INDEX-MATCH, IF), Pivot Tables, Conditional Formatting, Data Validation & Chartss",
       ],
     },
     {
-      module: "SQL for Database Management",
+      module: "SQL for Database Management:",
       weeks: [
-        "Week 4: Python basics, pandas DataFrames, data cleaning",
-        "Week 5: numpy, matplotlib, seaborn — EDA & visualisations",
-        "Week 6: Automating reports with Python scripts",
+        "SELECT & Filtering, JOINs (INNER / LEFT / RIGHT), GROUP BY & Aggregations, Subqueries",
       ],
     },
     {
       module: "Power BI Essentials:",
       weeks: [
-        "Week 7: Power BI Desktop — DAX, relationships, slicers",
-        "Week 8: Publishing dashboards, capstone project kickoff",
-        "Week 9–12: Capstone build, mentor reviews, presentation",
+        "Connecting data sources, Building reports, Visuals (Bar, Line, Pie, Map), Slicers & Filters",
       ],
     },
     {module: "Data Cleaning Techniques:",
       weeks: [
-        "Week 7: Power BI Desktop — DAX, relationships, slicers",
-        "Week 8: Publishing dashboards, capstone project kickoff",
-        "Week 9–12: Capstone build, mentor reviews, presentation",
+        "Handling nulls & duplicates, Text cleaning, Data type conversion, Outlier identification",
       ],
     },
     {module: "Basic DAX Measures:",
       weeks: [
-        "Week 7: Power BI Desktop — DAX, relationships, slicers",
-        "Week 8: Publishing dashboards, capstone project kickoff",
-        "Week 9–12: Capstone build, mentor reviews, presentation",
+        "Calculated columns vs Measures, SUM / COUNT / AVERAGE, CALCULATE, IF, basic Date functions",
       ],
     },
      {module: "Basic Power Query:",
       weeks: [
-        "Week 7: Power BI Desktop — DAX, relationships, slicers",
-        "Week 8: Publishing dashboards, capstone project kickoff",
-        "Week 9–12: Capstone build, mentor reviews, presentation",
+        "Importing & shaping data, Filtering rows, Merging queries, Removing errors & duplicates",
       ],
     },
      {module: "Interactive Dashboard:",
       weeks: [
-        "Week 7: Power BI Desktop — DAX, relationships, slicers",
-        "Week 8: Publishing dashboards, capstone project kickoff",
-        "Week 9–12: Capstone build, mentor reviews, presentation",
+        "KPI cards, Cross-filtering, Drill-through, Layout design, Publishing & sharing reports",
       ],
     }
   ],
@@ -64,71 +50,55 @@ const CURRICULUM: Record<string, { module: string; weeks: string[] }[]> = {
     {
       module: " Frontend: ",
       weeks: [
-        "Week 1: Python refresher, virtual envs, FastAPI project setup",
-        "Week 2: Routes, Pydantic models, dependency injection",
-        "Week 3: JWT auth, OAuth2, role-based access control",
+        "HTML, CSS, JavaScript, ReactJS",
       ],
     },
     {
       module: "Backend:",
       weeks: [
-        "Week 4: Postgres schema design, SQLAlchemy ORM",
-        "Week 5: Alembic migrations, seeding, query optimisation",
+        "Python, FastAPI fundamentals",
       ],
     },
     {
-      module: "Database",
+      module: "Database:",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "PostgreSQL basics & advanced queries",
       ],
     },
     {
-      module: "Full Stack",
+      module: "Full Stack:",
       weeks: [
-        "Week 9: Docker, CI/CD basics, Render/Railway deploy",
-        "Week 10–12: Capstone product build, demo day",
+        "Advanced React, FastAPI, REST APIs",
       ],
     },
      {
-      module: "AI Integration",
+      module: "AI Integration:",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "OpenAI API, Claude API",
       ],
     },
      {
-      module: "AI tools ",
+      module: "AI tools: ",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "Prompt engineering, RAG systems",
       ],
     },
      {
-      module: "Full Stack Advanced",
+      module: "Full Stack Advanced:",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "NextJS, Microservices, GraphQL",
       ],
     },
      {
-      module: "AI Advanced ",
+      module: "AI Advanced:",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "Custom model fine-tuning, Multi-modal AI",
       ],
     },
      {
-      module: "Enterprise",
+      module: "Enterprise:",
       weeks: [
-        "Week 6: React + TypeScript, component architecture",
-        "Week 7: React Query, Tailwind, form handling",
-        "Week 8: Routing, auth integration with backend",
+        "Scalable AI architecture & deployment",
       ],
     },
   ],
@@ -151,12 +121,12 @@ export default function CourseTimeline({ slug }: CourseTimelineProps) {
   };
 
   return (
-    <section className="border-b-2 border-[#1a1a1a] bg-white px-6 py-20">
+    <section className="border-b-2 border-[#1a1a1a] bg-white px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#1a1a1a]/50 md:text-xs">
           // curriculum
         </p>
-        <h2 className="mb-12 text-4xl font-black md:text-5xl">
+        <h2 className="mb-8 text-3xl font-black md:mb-12 md:text-5xl">
           What you&apos;ll <i className="not-italic text-[#f5c518]">learn</i>
         </h2>
 
@@ -186,9 +156,9 @@ export default function CourseTimeline({ slug }: CourseTimelineProps) {
               <div key={i} className="border-2 border-b-0 border-[#1a1a1a] last:border-b-2">
                 <button
                   onClick={() => toggle(i)}
-                  className="flex w-full items-center justify-between px-6 py-4 text-left"
+                  className="flex w-full items-center justify-between px-4 py-3 text-left md:px-6 md:py-4"
                 >
-                  <span className="font-extrabold">{m.module}</span>
+                  <span className="font-extrabold text-sm md:text-base">{m.module}</span>
                   <span className="font-mono text-lg text-[#1a1a1a]/50">
                     {open === i ? "−" : "+"}
                   </span>
@@ -203,9 +173,9 @@ export default function CourseTimeline({ slug }: CourseTimelineProps) {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden border-t-2 border-[#1a1a1a]"
                     >
-                      <ul className="space-y-2 px-6 py-4">
+                      <ul className="space-y-2 px-4 py-3 md:px-6 md:py-4">
                         {m.weeks.map((w, wi) => (
-                          <li key={wi} className="flex items-start gap-2 text-sm text-[#1a1a1a]/70">
+                          <li key={wi} className="flex items-start gap-2 text-xs text-[#1a1a1a]/70 md:text-sm">
                             <span className="mt-0.5 text-[#f5c518]">▸</span>
                             {w}
                           </li>

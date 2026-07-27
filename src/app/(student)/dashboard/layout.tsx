@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useAuth } from "@/lib/auth/AuthContext";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import StaggeredMenu from "@/components/layout/StaggeredMenu";
 
 const NAV = [
   { href: "/dashboard", label: "Overview" },
@@ -37,8 +38,44 @@ export default function DashboardLayout({
     return <div className="p-10 font-mono">Loading dashboard...</div>;
   }
 
+  const menuItems = [
+    { label: "Home", ariaLabel: "Home", link: "/" },
+    ...NAV.map((item) => ({
+      label: item.label,
+      ariaLabel: item.label,
+      link: item.href,
+    })),
+  ];
+
+  const socialItems = [
+    {
+      label: "Log out",
+      onClick: handleSignOut,
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen flex-col md:flex-row">
+      {/* Mobile Header */}
+      <header className="sticky top-0 z-40 flex items-center justify-between border-b-2 border-[#1a1a1a] bg-white p-4 md:hidden">
+        <Link href="/" className="text-xl font-black tracking-tight" style={{ fontFamily: "var(--font-gugi)" }}>
+          genzcodemy<span className="text-[#f5c518]">.</span>
+        </Link>
+        <StaggeredMenu
+          isFixed={true}
+          position="right"
+          items={menuItems}
+          socialItems={socialItems}
+          displaySocials={true}
+          displayItemNumbering={true}
+          menuButtonColor="#1a1a1a"
+          openMenuButtonColor="#1a1a1a"
+          changeMenuColorOnOpen={false}
+          colors={["#f5c518", "#1a1a1a"]}
+          accentColor="#f5c518"
+        />
+      </header>
+
       <aside className="hidden w-64 shrink-0 border-r-2 border-[#1a1a1a] p-6 md:block">
         <Link href="/" className="text-lg font-black" style={{ fontFamily: "var(--font-gugi)" }}>
           genzcodemy<span className="text-[#f5c518]">.</span>

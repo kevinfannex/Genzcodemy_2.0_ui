@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useAuth } from "@/lib/auth/AuthContext";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import StaggeredMenu from "@/components/layout/StaggeredMenu";
 
 const NAV = [
   { href: "/admin-portal/dashboard", label: "Overview" },
@@ -40,8 +41,42 @@ export default function AdminLayout({
   
   if (pathname === "/admin-portal/login") return <>{children}</>;
 
+  const menuItems = [
+    { label: "Home", ariaLabel: "Home", link: "/" },
+    ...NAV.map((item) => ({
+      label: item.label,
+      ariaLabel: item.label,
+      link: item.href,
+    })),
+  ];
+
+  const socialItems = [
+    {
+      label: "Log out",
+      onClick: handleSignOut,
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex min-h-screen flex-col bg-white md:flex-row">
+      {/* Mobile Header */}
+      <header className="sticky top-0 z-40 flex items-center justify-between border-b-2 border-[#1a1a1a] bg-[#1a1a1a] p-4 text-white md:hidden">
+        <p className="font-mono text-sm text-[#f5c518]">admin@genzcodemy</p>
+        <StaggeredMenu
+          isFixed={true}
+          position="right"
+          items={menuItems}
+          socialItems={socialItems}
+          displaySocials={true}
+          displayItemNumbering={true}
+          menuButtonColor="#ffffff"
+          openMenuButtonColor="#1a1a1a"
+          changeMenuColorOnOpen={true}
+          colors={["#f5c518", "#1a1a1a"]}
+          accentColor="#f5c518"
+        />
+      </header>
+
       <aside className="hidden w-64 shrink-0 border-r-2 border-[#1a1a1a] bg-[#1a1a1a] p-6 text-white md:block">
         <p className="font-mono text-sm text-[#f5c518]">admin@genzcodemy</p>
 

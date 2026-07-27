@@ -68,8 +68,8 @@ function CourseCard({ course, index }: { course: (typeof COURSES)[0]; index: num
           </span>
         </div>
 
-        {/* Middle Section: Details (slides up on hover) */}
-        <div className="space-y-4 transition-transform duration-500 ease-in-out group-hover:-translate-y-20">
+        {/* Middle Section: Details (slides up on hover on desktop) */}
+        <div className="space-y-4 transition-transform duration-500 ease-in-out md:group-hover:-translate-y-20">
           <h3 className="text-3xl font-black text-white leading-tight">{course.title}</h3>
           <p className="text-sm text-white/70 leading-relaxed">{course.blurb}</p>
           <ul className="mt-4 space-y-2">
@@ -85,8 +85,8 @@ function CourseCard({ course, index }: { course: (typeof COURSES)[0]; index: num
           </ul>
         </div>
 
-        {/* Bottom Section: CTA (revealed on hover) */}
-        <div className="absolute -bottom-20 left-0 w-full p-8 opacity-0 transition-all duration-500 ease-in-out group-hover:bottom-0 group-hover:opacity-100">
+        {/* Bottom Section: CTA (always visible on mobile, revealed on hover on desktop) */}
+        <div className="mt-6 md:mt-0 md:absolute md:-bottom-20 md:left-0 md:w-full md:p-8 md:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:group-hover:bottom-0 md:group-hover:opacity-100">
           <button
             onClick={handleView}
             className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white bg-white px-6 py-3 font-bold text-[#1a1a1a] transition-colors duration-200 hover:bg-[#f5c518] hover:border-[#f5c518]"

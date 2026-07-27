@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -41,9 +41,9 @@ function StatCard({ stat }: { stat: (typeof STATS)[0] }) {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45 }}
-      className="border-2 border-[#1a1a1a] bg-white p-8 text-center shadow-[8px_8px_0px_#1a1a1a]"
+      className="border-2 border-[#1a1a1a] bg-white p-6 text-center shadow-[6px_6px_0px_#1a1a1a] md:p-8 md:shadow-[8px_8px_0px_#1a1a1a]"
     >
-      <p className="font-mono text-5xl font-black tabular-nums text-[#1a1a1a]">
+      <p className="font-mono text-4xl font-black tabular-nums text-[#1a1a1a] md:text-5xl">
         {count.toLocaleString()}
         <span className="text-[#f5c518]">{stat.suffix}</span>
       </p>
@@ -56,15 +56,16 @@ function StatCard({ stat }: { stat: (typeof STATS)[0] }) {
 
 export default function TalentPoolStats() {
   return (
-    <section className="border-b-2 border-[#1a1a1a] bg-[#f5c518] px-6 py-20">
+    <section className="border-b-2 border-[#1a1a1a] bg-[#f5c518] px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/60">
-          // talent_pool.json
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#1a1a1a]/50 md:text-xs">
+          // the_talent_pool
         </p>
-        <h2 className="mb-12 text-4xl font-black md:text-5xl">
-          Hire from a Pool of <i className="not-italic underline decoration-[#1a1a1a]">Job-Ready</i> Talent.
+        <h2 className="mb-10 text-3xl font-black text-[#1a1a1a] md:mb-14 md:text-5xl">
+          By the <i className="not-italic text-white">numbers</i>.
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
           {STATS.map((s) => (
             <StatCard key={s.label} stat={s} />
           ))}

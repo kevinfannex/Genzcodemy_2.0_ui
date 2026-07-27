@@ -4,7 +4,7 @@ import React from "react";
 
 export default function ReachUsDirectly() {
   return (
-    <div className="border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white shadow-[8px_8px_0px_#f5c518]">
+    <div className="border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white shadow-[6px_6px_0px_#f5c518] md:shadow-[8px_8px_0px_#f5c518]">
       {/* macOS style dots */}
       <div className="flex items-center gap-1.5 border-b-2 border-[#1a1a1a] bg-[#2d2d2d] px-4 py-3">
         <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
@@ -15,9 +15,9 @@ export default function ReachUsDirectly() {
         </span>
       </div>
 
-      <div className="p-6 space-y-6">
+      <div className="p-5 space-y-6 md:p-6">
         <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-[#f5c518] mb-1">
+          <h3 className="font-mono text-[10px] uppercase tracking-widest text-[#f5c518] mb-1 md:text-xs">
             // email_us
           </h3>
           {/* TODO: Replace with real email address */}
@@ -30,7 +30,7 @@ export default function ReachUsDirectly() {
         </div>
 
         <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-[#f5c518] mb-1">
+          <h3 className="font-mono text-[10px] uppercase tracking-widest text-[#f5c518] mb-1 md:text-xs">
             // call_us
           </h3>
           {/* TODO: Replace with real phone number */}
@@ -40,7 +40,7 @@ export default function ReachUsDirectly() {
         </div>
 
         <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-[#f5c518] mb-1">
+          <h3 className="font-mono text-[10px] uppercase tracking-widest text-[#f5c518] mb-1 md:text-xs">
             // office_hours
           </h3>
           {/* TODO: Replace with real office hours */}
@@ -50,7 +50,7 @@ export default function ReachUsDirectly() {
         </div>
 
         <div className="pt-4 border-t border-white/10">
-          <h3 className="font-mono text-xs uppercase tracking-widest text-[#f5c518] mb-2">
+          <h3 className="font-mono text-[10px] uppercase tracking-widest text-[#f5c518] mb-2 md:text-xs">
             // follow_us
           </h3>
           {/* TODO: Replace with real social media links */}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -13,39 +13,39 @@ const PROJECTS: Record<
       title: "Sales Dashboard",
       caption: "Power BI report connected to a Postgres warehouse",
       // TODO: replace with /placeholders/da-sales-dashboard.png
-      image: "/placeholders/placeholder-1.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Gemini_Generated_Image_ijl6aaijl6aaijl6.png",
     },
     {
       title: "Churn Analysis",
       caption: "Python notebook predicting customer churn with pandas & seaborn",
       // TODO: replace with /placeholders/da-churn-analysis.png
-      image: "/placeholders/placeholder-2.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Gemini_Generated_Image_nnuhjsnnuhjsnnuh.png",
     },
     {
       title: "SQL Report Automation",
       caption: "Scheduled SQL + Python pipeline emailing weekly KPI summaries",
       // TODO: replace with /placeholders/da-sql-automation.png
-      image: "/placeholders/placeholder-3.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Gemini_Generated_Image_96lqig96lqig96lq.png",
     },
   ],
   "python-full-stack": [
     {
-      title: "Task Manager API",
-      caption: "FastAPI backend with JWT auth, deployed on Railway",
+      title: "GenAI Chat Assistant",
+      caption: "Full-stack AI chatbot with memory, authentication, document uploads, and streaming responses.FastAPI backend with JWT auth, deployed on Railway",
       // TODO: replace with /placeholders/fs-task-api.png
-      image: "/placeholders/placeholder-1.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/GenAI%20Chat%20Assistant.png",
     },
     {
-      title: "React Dashboard",
-      caption: "Full frontend with React Query, Tailwind v4, protected routes",
+      title: "AI SaaS Platform",
+      caption: "Build and deploy a production-ready AI SaaS application with payments, authentication, and dashboards.",
       // TODO: replace with /placeholders/fs-react-dashboard.png
-      image: "/placeholders/placeholder-2.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/AI%20SaaS%20Platform.png",
     },
     {
-      title: "Capstone SaaS",
-      caption: "End-to-end product shipped by students during demo week",
+      title: "AI Portfolio Builder",
+      caption: "Create a professional portfolio powered by AI recommendations.",
       // TODO: replace with /placeholders/fs-capstone.png
-      image: "/placeholders/placeholder-3.svg",
+      image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/AI%20Portfolio%20Builder.png",
     },
   ],
 };
@@ -75,17 +75,17 @@ export default function WhatYoullBuild({ slug }: WhatYoullBuildProps) {
   if (projects.length === 0) return null;
 
   return (
-    <section className="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] px-6 py-20">
+    <section className="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="mb-2 font-mono text-xs uppercase tracking-widest text-white/40">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/40 md:text-xs">
           // what_you_ll_build
         </p>
-        <h2 className="mb-12 text-4xl font-black text-white md:text-5xl">
+        <h2 className="mb-8 text-3xl font-black text-white md:mb-12 md:text-5xl">
           You&apos;ll ship{" "}
           <i className="not-italic text-[#f5c518]">this</i>.
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {projects.map((p, i) => (
             <motion.div
               key={i}
@@ -96,8 +96,17 @@ export default function WhatYoullBuild({ slug }: WhatYoullBuildProps) {
               className="border-2 border-white/30 bg-[#242424] shadow-[6px_6px_0px_#f5c518] transition hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[8px_8px_0px_#f5c518]"
             >
               {/* Image area */}
-              <div className="overflow-hidden border-b-2 border-white/20">
-                <PlaceholderImg label={p.title} />
+              <div className="h-48 overflow-hidden border-b-2 border-white/20 relative">
+                {p.image.startsWith("/placeholders/") ? (
+                  <PlaceholderImg label={p.title} />
+                ) : (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img 
+                    src={p.image} 
+                    alt={p.title} 
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" 
+                  />
+                )}
               </div>
               {/* Caption */}
               <div className="p-5">

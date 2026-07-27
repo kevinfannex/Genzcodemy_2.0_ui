@@ -69,8 +69,8 @@ function FAQItem({ faq, index }: { faq: (typeof FAQS)[0]; index: number }) {
 
 export default function ContactFAQ() {
   return (
-    <div className="mt-16">
-      <p className="mb-2 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50">
+    <div className="mt-12 md:mt-16">
+      <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#1a1a1a]/50 md:text-xs">
         // pre_sales_faq
       </p>
       <h2 className="mb-6 text-3xl font-black text-[#1a1a1a]">
@@ -78,7 +78,7 @@ export default function ContactFAQ() {
         <i className="not-italic text-[#f5c518]">Questions</i>
       </h2>
 
-      <div className="border-2 border-[#1a1a1a] bg-white p-6 shadow-[8px_8px_0px_#1a1a1a]">
+      <div className="border-2 border-[#1a1a1a] bg-white p-4 shadow-[6px_6px_0px_#1a1a1a] md:p-6 md:shadow-[8px_8px_0px_#1a1a1a]">
         {FAQS.map((faq, i) => (
           <FAQItem key={i} faq={faq} index={i} />
         ))}
