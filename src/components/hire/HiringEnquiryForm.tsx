@@ -148,13 +148,13 @@ export default function HiringEnquiryForm({
               <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
                 Company name *
               </label>
-              <input required className={inputCls} placeholder="Acme Corp" value={form.company_name} onChange={set("company_name")} />
+              <input required className={inputCls} placeholder="GENZCODEMY" value={form.company_name} onChange={set("company_name")} />
             </div>
             <div>
               <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
                 Your name *
               </label>
-              <input required className={inputCls} placeholder="Jane Smith" value={form.contact_name} onChange={set("contact_name")} />
+              <input required className={inputCls} placeholder="Gokul" value={form.contact_name} onChange={set("contact_name")} />
             </div>
           </div>
 
@@ -164,13 +164,13 @@ export default function HiringEnquiryForm({
               <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
                 Work email *
               </label>
-              <input required type="email" className={inputCls} placeholder="jane@acme.com" value={form.email} onChange={set("email")} />
+              <input required type="email" className={inputCls} placeholder="connect@genzcodemy.com" value={form.email} onChange={set("email")} />
             </div>
             <div>
               <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
                 Phone
               </label>
-              <input className={inputCls} placeholder="+91 98765 43210" value={form.phone} onChange={set("phone")} />
+              <input className={inputCls} placeholder="+91 **********" value={form.phone} onChange={set("phone")} />
             </div>
           </div>
 

@@ -204,17 +204,18 @@ export default function SuccessStories() {
             </span>
           </h2>
           <p className="mt-4 font-mono text-base text-[#1a1a1a]/50">
-            Hover each avatar to read their story.
+            <span className="hidden md:inline">Hover each avatar to read their story.</span>
+            <span className="md:hidden">Swipe to read their stories.</span>
           </p>
         </motion.div>
 
-        {/* Avatars Container */}
+        {/* Desktop Avatars Container - Scattered Layout */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative w-full overflow-visible py-8"
+          className="relative hidden w-full overflow-visible py-8 md:block"
           style={{ height: "400px" }}
         >
           {/* Avatars placed loosely */}
@@ -227,6 +228,33 @@ export default function SuccessStories() {
             />
           ))}
         </motion.div>
+
+        {/* Mobile Container - Horizontal Carousel */}
+        <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-1 md:hidden hide-scrollbar">
+          {TESTIMONIALS.map((t, i) => (
+            <div
+              key={i}
+              className="w-[85vw] shrink-0 snap-center rounded-2xl border-2 border-[#1a1a1a] bg-white p-6 shadow-[6px_6px_0px_#1a1a1a]"
+            >
+              <div className="mb-4 flex items-center gap-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="h-12 w-12 rounded-full border-2 border-[#1a1a1a] object-cover"
+                />
+                <div>
+                  <p className="text-sm font-bold text-[#1a1a1a]">{t.name}</p>
+                  <p className="font-mono text-[10px] text-gray-500">{t.role.split(" at ")[0]}</p>
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed text-[#1a1a1a]/80">
+                &ldquo;{t.text}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+
 
       </div>
     </section>
