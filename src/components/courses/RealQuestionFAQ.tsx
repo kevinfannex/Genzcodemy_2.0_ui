@@ -110,7 +110,6 @@ export default function RealQuestionFAQ() {
             onSubmit={handleAsk} 
             className="relative flex items-center border-2 border-[#1a1a1a] bg-white p-2 shadow-[6px_6px_0px_#1a1a1a] transition hover:shadow-[8px_8px_0px_#1a1a1a]"
           >
-            <span className="pl-4 pr-2 text-lg text-[#1a1a1a]/50">??</span>
             <input
               type="text"
               placeholder="What's on your mind?"
@@ -123,7 +122,12 @@ export default function RealQuestionFAQ() {
               className="flex h-11 w-11 shrink-0 items-center justify-center border-2 border-[#1a1a1a] bg-[#f5c518] font-bold text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white"
               title="Ask question"
             >
-              ?
+              💡 
+              {/* <img
+                src="https://ik.imagekit.io/g4lukt2ll/Genzcodemy/happy-conceptual-lightbulb-icon-happy-conceptual-lightbulb-icon-vector-illustration-design-115766905-removebg-preview.png"
+                alt="Ask"
+                className="w-6 h-6 object-contain"
+              /> */}
             </button>
           </form>
           <p className="mt-3 font-mono text-xs text-[#1a1a1a]/40 font-bold">

@@ -15,14 +15,14 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-[#faf9f5] px-6 py-20 lg:py-32 border-b-4 border-[#1a1a1a]">
-      
+
       {/* Floating Neobrutalist Elements */}
-      
+
       {/* 1. Terminal / Code Icon (Teal) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, -10, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut" },
           y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
         }}
@@ -32,10 +32,10 @@ export default function Hero() {
       </motion.div>
 
       {/* 2. Eye / Vision Icon (Yellow) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 15, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut", delay: 1 },
           y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }
         }}
@@ -48,10 +48,10 @@ export default function Hero() {
       </motion.div>
 
       {/* 3. React / Orbit Icon (Blue) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, -12, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut", delay: 0.5 },
           y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }
         }}
@@ -65,10 +65,10 @@ export default function Hero() {
       </motion.div>
 
       {/* 4. Base / Database Icon (Pink) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut", delay: 1.5 },
           y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }
         }}
@@ -89,10 +89,10 @@ export default function Hero() {
       </motion.div>
 
       {/* 5. Git Branch Icon (Purple) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, -15, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut", delay: 0.8 },
           y: { duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }
         }}
@@ -107,10 +107,10 @@ export default function Hero() {
       </motion.div>
 
       {/* 6. Statistics Icon (Orange) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ 
+        transition={{
           opacity: { duration: 0.8, ease: "easeOut", delay: 1.2 },
           y: { duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1.2 }
         }}
@@ -133,13 +133,13 @@ export default function Hero() {
           <path d="M3 3l7 18 3-7 7-3-18-8z" />
         </svg>
       </motion.div> */}
-      
+
 
       <div className="relative z-30 mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Block: Typography */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -148,15 +148,15 @@ export default function Hero() {
             <p className="mb-4 font-mono text-sm font-bold tracking-widest text-[#1a1a1a]/70 uppercase">
               WE DON'T JUST TEACH. WE BUILD CAREERS.
             </p>
-            
+
             <h1 className="text-[4rem] font-black leading-[0.95] tracking-tight text-[#1a1a1a] sm:text-[5.5rem] lg:text-[7rem] uppercase">
               LEARN BUILD
               <br />
               GET HIRED.
             </h1>
-            
+
             <p className="mt-8 max-w-xl text-lg font-medium leading-relaxed text-[#1a1a1a]/80 md:text-xl">
-            Master in-demand skills, work on real-world projects, learn from industry experts, and become job-ready with dedicated placement support.
+              Master in-demand skills, work on real-world projects, learn from industry experts, and become job-ready with dedicated placement support.
             </p>
 
             <div className="mt-10 inline-flex">
@@ -170,28 +170,28 @@ export default function Hero() {
           </motion.div>
 
           {/* Right Block: Cutout Person */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="lg:col-span-5 relative mt-16 lg:mt-0 flex justify-center lg:justify-end"
           >
-            
+
             {/* The Pink Geometric Frame */}
             <div className="relative h-[400px] w-[320px] sm:h-[500px] sm:w-[400px]">
-              
+
               {/* Outer stroke/shadow for the shape */}
-              <div 
+              <div
                 className="absolute inset-0 translate-x-[10px] translate-y-[10px] bg-[#1a1a1a] rounded-[40px] rounded-tl-[80px] rounded-br-[80px]"
               ></div>
-              
+
               {/* Colored shape container */}
-              <div 
+              <div
                 className="absolute inset-0 border-4 border-[#1a1a1a] bg-[#f074d2] rounded-[40px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden flex items-end justify-center"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src="https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Gemini_Generated_Image_xdn7arxdn7arxdn7-removebg-preview.png" 
+                <img
+                  src="https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Gemini_Generated_Image_xdn7arxdn7arxdn7-removebg-preview.png"
                   alt="Mentor"
                   className="relative z-10 w-[120%] h-auto max-h-[110%] object-cover object-bottom"
                   style={{ filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.2))" }}
@@ -207,10 +207,10 @@ export default function Hero() {
               >
                 {/* Bubble pointer */}
                 <div className="absolute -bottom-[14px] right-12 w-6 h-6 bg-white border-b-4 border-r-4 border-[#1a1a1a] transform rotate-45 -z-10"></div>
-                
+
                 <TypeAnimation
                   sequence={[
-                    1200, 
+                    1200,
                     'DEBUG. OPTIMIZE. LAUNCH.\nWHERE DO I BEGIN?',
                     3000,
                   ]}
@@ -223,7 +223,7 @@ export default function Hero() {
               </motion.div>
 
               {/* Overlapping Pill Tag */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
@@ -231,14 +231,14 @@ export default function Hero() {
               >
                 <span className="text-lg">🚀</span> Next batch starting soon
               </motion.div>
-              
+
             </div>
 
           </motion.div>
-          
+
         </div>
       </div>
-      
+
     </section>
   );
 }

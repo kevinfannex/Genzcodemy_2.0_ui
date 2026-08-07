@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useAuthGate } from "@/components/auth/AuthGateModal";
 import { useRouter } from "next/navigation";

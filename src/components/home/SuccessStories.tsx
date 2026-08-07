@@ -142,11 +142,11 @@ function AvatarDot({ t, xPct, yPct }: { t: Testimonial; xPct: number; yPct: numb
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         animate={{ y: [0, -8, 0] }}
-        transition={{ 
-          duration: 3, 
-          repeat: Infinity, 
+        transition={{
+          duration: 3,
+          repeat: Infinity,
           ease: "easeInOut",
-          delay: (xPct % 20) / 10 
+          delay: (xPct % 20) / 10
         }}
       >
         <motion.div

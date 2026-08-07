@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -29,13 +29,12 @@ function TerminalLine({ line, started }: { line: (typeof LINES)[0]; started: boo
       initial={{ opacity: 0, x: -6 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
-      className={`font-mono text-sm ${
-        isOutput
+      className={`font-mono text-sm ${isOutput
           ? "text-[#4ade80] font-bold"
           : line.text.startsWith("$")
-          ? "text-white"
-          : "text-white/60"
-      }`}
+            ? "text-white"
+            : "text-white/60"
+        }`}
     >
       {line.text}
     </motion.p>

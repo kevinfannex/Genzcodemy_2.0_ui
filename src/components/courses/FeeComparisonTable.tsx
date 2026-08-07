@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import type { Course } from "@/types";
@@ -86,7 +86,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Price</td>
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-mono text-xl font-bold text-[#1a1a1a]">
-                      ?{c.price.toLocaleString("en-IN")}
+                      ₹{c.price.toLocaleString("en-IN")}
                     </td>
                   ))}
                 </tr>

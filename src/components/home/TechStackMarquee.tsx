@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 
@@ -36,7 +36,7 @@ export default function TechStackMarquee() {
         }
       `}</style>
 
-      {/* <div className="marquee-track">
+      <div className="marquee-track">
         {items.map((tool, i) => (
           <Link
             key={i}
@@ -47,7 +47,7 @@ export default function TechStackMarquee() {
             {tool.name}
           </Link>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 }

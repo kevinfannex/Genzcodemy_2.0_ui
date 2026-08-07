@@ -206,14 +206,14 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="mt-16 flex flex-col items-center justify-between border-t border-white pt-8 text-xs text-white md:flex-row">
             <p>© {new Date().getFullYear()} Genzcodemy. All rights reserved.</p>
-            <div className="mt-4 flex gap-6 md:mt-0">
+            {/* <div className="mt-4 flex gap-6 md:mt-0">
               <Link href="#" className="hover:text-white">Privacy Policy</Link>
               <Link href="#" className="hover:text-white">Terms of Service</Link>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Large watermark text */}
-        <div className="mt-8 overflow-hidden select-none pointer-events-none w-full flex justify-center md:mt-12">
+        {/* <div className="mt-8 overflow-hidden select-none pointer-events-none w-full flex justify-center md:mt-12">
           <p
             className="text-center uppercase leading-none tracking-tighter font-mono text-white"
             style={{
@@ -225,7 +225,7 @@ export default function Footer() {
           >
             GENZCODEMY
           </p>
-        </div>
+        </div> */}
       </footer>
     </section>
   );
