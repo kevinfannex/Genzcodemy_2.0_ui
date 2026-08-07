@@ -3,7 +3,7 @@ import { coursesApi } from "@/lib/api/courses";
 import { notFound } from "next/navigation";
 import CourseTimeline from "@/components/courses/CourseTimeline";
 import WhatYoullBuild from "@/components/courses/WhatYoullBuild";
-import MentorSpotlight from "@/components/courses/MentorSpotlight";
+// import MentorSpotlight from "@/components/courses/MentorSpotlight";
 import CareerLaunchpad from "@/components/courses/CareerLaunchpad";
 import RealQuestionFAQ from "@/components/courses/RealQuestionFAQ";
 
@@ -109,7 +109,7 @@ export default async function CourseDetailPage({
 
       <CourseTimeline slug={slug} />
       <WhatYoullBuild slug={slug} />
-      <MentorSpotlight slug={slug} />
+      {/* <MentorSpotlight slug={slug} /> */}
       <CareerLaunchpad />
       <RealQuestionFAQ />
     </>
