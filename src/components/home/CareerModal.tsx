@@ -54,7 +54,7 @@ export default function CareerModal({ onClose }: CareerModalProps) {
   return (
     /* Backdrop */
     <motion.div
-      className="fixed inset-0 z-[1000] flex items-center justify-center p-5"
+      className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-5"
       style={{ background: "rgba(13,13,13,0.7)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -63,16 +63,16 @@ export default function CareerModal({ onClose }: CareerModalProps) {
     >
       {/* Modal card */}
       <motion.div
-        className="relative w-full max-w-[480px] overflow-hidden rounded-2xl border-2 border-[#1a1a1a] bg-[#faf9f7]"
+        className="relative  sm:max-w-[480px] overflow-hidden rounded-2xl border-2 border-[#1a1a1a] bg-[#faf9f7]"
         style={{ boxShadow: "8px 8px 0px #1a1a1a" }}
-        initial={{ scale: 0.9, opacity: 0, y: 20 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        exit={{ scale: 0.9, opacity: 0, y: 20 }}
+        initial={{ scale: 0.9, opacity: 0, y: 20, x: -4 }}
+        animate={{ scale: 1, opacity: 1, y: -4, x: -4 }}
+        exit={{ scale: 0.9, opacity: 0, y: 20, x: -4 }}
         transition={{ type: "spring", damping: 25, stiffness: 350 }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Mac-style window bar */}
-        <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] bg-[#eae8e4] px-5 py-3">
+        <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] bg-[#eae8e4] px-4 sm:px-5 py-2.5 sm:py-3">
           {/* Traffic light dots */}
           <div className="flex gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full border border-[#1a1a1a] bg-[#ff5f56]" />
@@ -81,7 +81,7 @@ export default function CareerModal({ onClose }: CareerModalProps) {
           </div>
 
           {/* Window title */}
-          <span className="font-mono text-[0.85rem] font-bold text-[#555555]">
+          <span className="font-mono text-[11px] sm:text-[0.85rem] font-bold text-[#555555]">
             admission_portal.sh
           </span>
 
@@ -96,22 +96,22 @@ export default function CareerModal({ onClose }: CareerModalProps) {
         </div>
 
         {/* Modal body */}
-        <div className="flex flex-col items-center px-8 pb-8 pt-7 text-center">
+        <div className="flex flex-col items-center px-6 pb-6 pt-5 sm:px-8 sm:pb-8 sm:pt-6 text-center">
           {/* Badge */}
           <span
-            className="mb-6 inline-block rounded border-2 border-[#1a1a1a] bg-[#f5c518] px-3 py-1 font-mono text-[0.85rem] font-black text-[#1a1a1a]"
+            className="mb-4 sm:mb-5 inline-block rounded border-2 border-[#1a1a1a] bg-[#f5c518] px-2.5 py-1 sm:px-3 font-mono text-[10px] sm:text-[0.85rem] font-black text-[#1a1a1a]"
             style={{ boxShadow: "2px 2px 0px #1a1a1a" }}
           >
             [ 2026 BATCH OPEN ]
           </span>
 
           {/* Heading */}
-          <h2 className="mb-4 text-[2.25rem] font-extrabold leading-tight tracking-tight text-[#1a1a1a]">
+          <h2 className="mb-2 sm:mb-4 text-[1.5rem] sm:text-[2.25rem] font-extrabold leading-tight tracking-tight text-[#1a1a1a]">
             Are you a 2026 Passout?
           </h2>
 
           {/* Subtitle */}
-          <p className="mb-8 max-w-[400px] text-base font-medium leading-relaxed text-[#555555]">
+          <p className="mb-6 sm:mb-8 max-w-[400px] text-sm sm:text-base font-medium leading-relaxed text-[#555555]">
             Looking to start your career? You landed in the right place!
           </p>
 
@@ -119,7 +119,7 @@ export default function CareerModal({ onClose }: CareerModalProps) {
           <Link
             href="/courses"
             onClick={onClose}
-            className="flex w-full items-center justify-center rounded-lg border-2 border-[#1a1a1a] bg-[#1a1a1a] px-7 py-4 text-[1.1rem] font-bold text-white no-underline transition-all duration-200"
+            className="flex w-full items-center justify-center rounded-lg border-2 border-[#1a1a1a] bg-[#1a1a1a] px-5 py-3.5 sm:px-7 sm:py-4 text-[1rem] sm:text-[1.1rem] font-bold text-white no-underline transition-all duration-200"
             style={{ boxShadow: "4px 4px 0px #f5c518" }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLElement).style.transform = "translate(-2px, -2px)";

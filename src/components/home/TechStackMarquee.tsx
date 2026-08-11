@@ -10,8 +10,6 @@ const TOOLS = [
   { name: "PostgreSQL", icon: "🐘" },
   { name: "Pandas", icon: "🐼" },
   { name: "Git", icon: "🔀" },
-  { name: "Docker", icon: "🐋" },
-  { name: "Jupyter", icon: "📓" },
   { name: "TypeScript", icon: "🔷" },
 ];
 

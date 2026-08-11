@@ -22,7 +22,7 @@ const FALLBACK_COURSES: Course[] = [
     slug: "python-full-stack",
     title: "Python Full Stack",
     description: "FastAPI, React, Postgres � ship a real product end to end.",
-    tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL","Docker" ],
+    tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL" ],
     duration_weeks: 12,
     price: 20000,
     is_published: true,

@@ -17,7 +17,7 @@ export const GRADUATES = [
   {
     id: "g2",
     initials: "R.K.",
-    skills: ["FastAPI", "React", "Postgres", "Docker"],
+    skills: ["FastAPI", "React", "Postgres"],
     track: "Full Stack",
     project: "SaaS Task Manager — FastAPI + React, deployed on Railway",
     thumbnail: null,
