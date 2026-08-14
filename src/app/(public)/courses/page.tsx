@@ -7,6 +7,7 @@ import RealQuestionFAQ from "@/components/courses/RealQuestionFAQ";
 import WhyOnline from "@/components/courses/WhyOnline";
 import CompareOptions from "@/components/courses/CourseValueComparison";
 import CoursePrice from "@/components/courses/CoursePrice";
+import SavingsCalculator from "@/components/courses/SavingsCalculator";
 import type { Course } from "@/types";
 
 const FALLBACK_COURSES: Course[] = [
@@ -118,6 +119,9 @@ export default async function CoursesPage() {
 
       {/* Why Online section */}
       <WhyOnline />
+
+      {/* Savings Calculator section */}
+      <SavingsCalculator />
 
       {/* Compare the options */}
       <CompareOptions />
