@@ -163,7 +163,8 @@ export default function Journey() {
               </div>
 
               {/* ── Card body ── */}
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-col p-6">
+                <div className="flex items-center gap-5">
                 {/* Icon box — pops in with a bounce */}
                 <motion.div
                   className="mb-6 inline-flex h-11 w-11 items-center justify-center border-2 border-[#1a1a1a] bg-[#f5c518] text-[#1a1a1a] shadow-[2px_2px_0px_#1a1a1a]"
@@ -178,6 +179,7 @@ export default function Journey() {
                   whileHover={{ rotate: [0, -8, 8, 0], transition: { duration: 0.4 } }}
                 >
                   {icons[i]}
+                  
                 </motion.div>
 
                 {/* Title — slides up */}
@@ -190,7 +192,7 @@ export default function Journey() {
                 >
                   {step.title}
                 </motion.h3>
-
+                </div>
                 {/* Description — fades in */}
                 <motion.p
                   className="mb-6 flex-1 text-sm font-medium leading-relaxed text-[#1a1a1a]/55"

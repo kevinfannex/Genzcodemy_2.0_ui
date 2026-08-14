@@ -7,7 +7,7 @@ const CARDS = [
     number: "01",
     title: "Build Real Skills",
     body: "Work on practical projects that strengthen your portfolio and prepare you for real development work.",
-    isPrimary: true,
+    isPrimary: false,
   },
   {
     number: "02",

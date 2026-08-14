@@ -2,10 +2,11 @@ import EnrollButton from "@/components/courses/EnrollButton";
 import { coursesApi } from "@/lib/api/courses";
 import { notFound } from "next/navigation";
 import CourseTimeline from "@/components/courses/CourseTimeline";
+
 import WhatYoullBuild from "@/components/courses/WhatYoullBuild";
-// import MentorSpotlight from "@/components/courses/MentorSpotlight";
 import CareerLaunchpad from "@/components/courses/CareerLaunchpad";
 import RealQuestionFAQ from "@/components/courses/RealQuestionFAQ";
+import CoursePrice from "@/components/courses/CoursePrice";
 
 export default async function CourseDetailPage({
   params,
@@ -89,7 +90,7 @@ export default async function CourseDetailPage({
 
                   <div className="mb-2">
                     <p className="text-5xl font-black tracking-tight">
-                      {`\u20b9`}{course.price.toLocaleString("en-IN")}
+                      <CoursePrice priceINR={course.price} priceMYR={course.priceMYR} />
                     </p>
                     <p className="mt-2 font-mono text-sm font-bold text-[#1a1a1a]/60">
                       One-time payment {`\u00b7`} Full access
@@ -108,6 +109,7 @@ export default async function CourseDetailPage({
       </section>
 
       <CourseTimeline slug={slug} />
+
       <WhatYoullBuild slug={slug} />
       {/* <MentorSpotlight slug={slug} /> */}
       <CareerLaunchpad />

@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 import type { Course } from "@/types";
 import { coursesApi } from "@/lib/api/courses";
+import CurrencyToggle from "./CurrencyToggle";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -131,9 +132,10 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Desktop Auth Button */}
+        {/* Desktop Currency Toggle + Auth Button */}
         {!loading && (
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <CurrencyToggle />
             <Link
               href={user ? "/dashboard" : "/login"}
               className="border-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-2 text-sm font-bold text-white shadow-[4px_4px_0px_#f5c518] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"

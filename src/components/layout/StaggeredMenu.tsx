@@ -2,6 +2,7 @@
 
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import CurrencyToggle from './CurrencyToggle';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -473,6 +474,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col gap-5">
+            <div className="text-2xl font-black tracking-tight mb-4" style={{ fontFamily: "var(--font-gugi)" }}>
+              GENZCODEMY<span className="text-[#f5c518]">.</span>
+            </div>
             <ul
               className="sm-panel-list list-none m-0 p-0 flex flex-col gap-2"
               role="list"
@@ -504,6 +508,15 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 </li>
               )}
             </ul>
+
+            <div className="border-t-2 border-[#1a1a1a]/10 my-2" />
+
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs font-bold tracking-wider text-[#1a1a1a]/40">CURRENCY</span>
+              <div className="w-fit">
+                <CurrencyToggle />
+              </div>
+            </div>
 
             {displaySocials && socialItems && socialItems.length > 0 && (
               <div className="sm-socials mt-auto pt-8 flex flex-col gap-3" aria-label="Account link">

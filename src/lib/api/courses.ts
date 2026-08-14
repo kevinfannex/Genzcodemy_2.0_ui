@@ -9,6 +9,7 @@ const MOCK_COURSES: Course[] = [
     tools: ["Microsoft Excel", "SQL", "Power BI", "Power Query","DAX"],
     duration_weeks: 12,
     price: 15000,
+    priceMYR: 1000,
     is_published: true,
   },
   {
@@ -19,6 +20,7 @@ const MOCK_COURSES: Course[] = [
     tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL" ],
     duration_weeks: 12,
     price: 20000,
+    priceMYR: 1500,
     is_published: true,
   },
 ];

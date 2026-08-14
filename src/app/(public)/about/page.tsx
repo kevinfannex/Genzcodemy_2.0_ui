@@ -15,14 +15,14 @@ export default function AboutPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="border-b-2 border-[#1a1a1a] bg-white px-6 pb-16 pt-20">
+      <section className="border-b-2 border-[#1a1a1a] bg-white px-6 pb-10 pt-12">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/50">
+          <p className="mb-2 font-mono text-s uppercase tracking-widest text-[#1a1a1a]/50">
             about_genzcodemy.md
           </p>
           <h1
             className="font-black leading-none tracking-tight text-[#1a1a1a]"
-            style={{ fontSize: "clamp(3rem, 10vw, 9rem)" }}
+            style={{ fontSize: "clamp(2rem, 7vw, 8rem)" }}
           >
             About<br />
             <i className="not-italic text-[#f5c518]"

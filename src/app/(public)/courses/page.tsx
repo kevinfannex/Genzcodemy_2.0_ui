@@ -4,6 +4,9 @@ import CoursesHero from "@/components/courses/CoursesHero";
 import FeeComparisonTable from "@/components/courses/FeeComparisonTable";
 import CareerLaunchpad from "@/components/courses/CareerLaunchpad";
 import RealQuestionFAQ from "@/components/courses/RealQuestionFAQ";
+import WhyOnline from "@/components/courses/WhyOnline";
+import CompareOptions from "@/components/courses/CourseValueComparison";
+import CoursePrice from "@/components/courses/CoursePrice";
 import type { Course } from "@/types";
 
 const FALLBACK_COURSES: Course[] = [
@@ -15,6 +18,7 @@ const FALLBACK_COURSES: Course[] = [
     tools: ["Microsoft Excel", "SQL", "Power BI", "Power Query","DAX"],
     duration_weeks: 12,
     price: 15000,
+    priceMYR: 1000,
     is_published: true,
   },
   {
@@ -25,6 +29,7 @@ const FALLBACK_COURSES: Course[] = [
     tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL" ],
     duration_weeks: 12,
     price: 20000,
+    priceMYR: 1500,
     is_published: true,
   },
 ];
@@ -93,7 +98,7 @@ export default async function CoursesPage() {
                   
                   <div className="mt-auto flex items-center justify-between border-t-2 border-[#1a1a1a]/10 pt-6">
                     <p className="font-mono text-lg font-bold">
-                      ₹{course.price.toLocaleString("en-IN")}
+                      <CoursePrice priceINR={course.price} priceMYR={course.priceMYR} />
                     </p>
                     <span className="flex items-center gap-2 font-bold text-[#1a1a1a] transition-colors">
                       View details <span className="text-xl leading-none transition-transform group-hover:translate-x-1">?</span>
@@ -111,7 +116,13 @@ export default async function CoursesPage() {
         <FeeComparisonTable courses={displayCourses} />
       </div>
 
-      {/* 4. Career launchpad � always shown */}
+      {/* Why Online section */}
+      <WhyOnline />
+
+      {/* Compare the options */}
+      <CompareOptions />
+
+      {/* 4. Career launchpad  always shown */}
       <CareerLaunchpad />
 
       {/* 5. FAQ */}

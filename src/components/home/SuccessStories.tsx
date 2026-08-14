@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     text: "GENZCODEMY transformed my career! The mentorship and hands-on projects prepared me perfectly for my role.",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_1.avif",
     name: "Sri Lekha",
-    role: "Software Engineer at Qualcomm",
+    role: "Python Full Stack Developer at Qualcomm",
     initials: "SL",
     color: "#8993f4",
   },
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     text: "The Pro plan was worth every penny. Got an internship within 2 months and a full-time offer right after graduation!",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_4.jpg",
     name: "Mohammed Asif",
-    role: "DevOps Engineer at Zoho",
+    role: "Data Analyst at Zoho",
     initials: "MA",
     color: "#38b2ac",
   },
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
     text: "Best decision I made! The Ultra plan mentorship helped me land my dream job with a great salary package.",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_2.webp",
     name: "Sanjai Kumar",
-    role: "QA Engineer at Wipro",
+    role: "Software Developer at Wipro",
     initials: "SK",
     color: "#ff4a7e",
   },
@@ -32,7 +32,7 @@ const TESTIMONIALS = [
     text: "The comprehensive SAP training and real implementation projects made me job-ready. Now working with Fortune 500 clients!",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_2.jpg",
     name: "Dhanalakshmi",
-    role: "SAP Consultant at Deloitte",
+    role: "Software Engineer at Deloitte",
     initials: "DH",
     color: "#f5c518",
   },
@@ -40,7 +40,7 @@ const TESTIMONIALS = [
     text: "The hands-on projects and weekly mentor sessions were game-changers. I built a portfolio that impressed every interviewer!",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_3.avif",
     name: "Jebamalar",
-    role: "Full Stack Developer at Chargebee",
+    role: "Frontend Developer at Chargebee",
     initials: "JB",
     color: "#fb923c",
   },
@@ -48,7 +48,7 @@ const TESTIMONIALS = [
     text: "From zero to hero! The Ultra plan placement guidance and direct referrals helped me land my dream job.",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_3.jpg",
     name: "Umar Ali",
-    role: "Cloud Engineer at Lucidity",
+    role: "Backend Developer at Lucidity",
     initials: "UA",
     color: "#6dec86",
   },
@@ -56,7 +56,7 @@ const TESTIMONIALS = [
     text: "The comprehensive testing curriculum and real-world projects prepared me perfectly. Got placed within 3 months!",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/gril_4.avif",
     name: "Kavishree Balaji",
-    role: "Test Automation Engineer at Yellow.ai",
+    role: " Associate Analyst at Yellow.ai",
     initials: "KB",
     color: "#c084fc",
   },
@@ -64,7 +64,7 @@ const TESTIMONIALS = [
     text: "The detailed SAP modules and implementation projects gave me the confidence to work on enterprise-level clients.",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_5.jpg",
     name: "Tamizharasan",
-    role: "SAP FICO Consultant at Navi",
+    role: "Junior Data Analyst at Navi",
     initials: "TM",
     color: "#38b2ac",
   },
@@ -76,20 +76,72 @@ const TESTIMONIALS = [
     initials: "HK",
     color: "#ff4a7e",
   },
+  {
+    text: "The Python Full Stack course gave me the confidence to build complete web applications from frontend to backend. The mentor feedback and projects made a huge difference.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_7.webp",
+    name: "Arun Prakash",
+    role: "Python Full Stack Developer",
+    initials: "AP",
+    color: "#6366f1",
+  },
+  {
+    text: "The practical training helped me understand how software is actually developed. Building projects and preparing for interviews made me much more confident.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_5.webp",
+    name: "Keerthana S",
+    role: "Software Engineer",
+    initials: "KS",
+    color: "#06b6d4",
+  },
+  {
+    text: "The Data Analytics sessions made SQL, Excel, and Power BI much easier to understand. The projects gave me something concrete to showcase during interviews.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_6.jpg",
+    name: "Rohit Kumar",
+    role: "Associate Analyst",
+    initials: "RK",
+    color: "#22c55e",
+  },
+  {
+    text: "I really liked the project-based approach. Working with real datasets and getting feedback from mentors helped me develop practical analytics skills.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_4.avif",
+    name: "Nivetha R",
+    role: "Junior Data Analyst",
+    initials: "NR",
+    color: "#f97316",
+  },
+  {
+    text: "The combination of Python, React, APIs, and AI tools gave me a much clearer understanding of full stack development. The portfolio projects were especially valuable.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_8.webp",
+    name: "Vignesh M",
+    role: "Python Full Stack Developer",
+    initials: "VM",
+    color: "#8b5cf6",
+  }
 ];
 
 // Scattered positions for avatars to make them look organic
 // These are percentages of the container width/height
 const SCATTER_POSITIONS = [
-  { x: 8, y: 35 },
-  { x: 18, y: 75 },
-  { x: 30, y: 15 },
-  { x: 42, y: 60 },
-  { x: 52, y: 25 },
-  { x: 65, y: 80 },
-  { x: 75, y: 35 },
-  { x: 86, y: 65 },
-  { x: 94, y: 20 },
+   // Row 1
+  { x: 10, y: 20 },
+  { x: 38, y: 20 },
+  { x: 66, y: 20 },
+  { x: 92, y: 20 },
+
+  // Row 2
+  { x: 23, y: 40 },
+  { x: 51, y: 40 },
+  { x: 79, y: 40 },
+
+  // Row 3
+  { x: 8, y: 62 },
+  { x: 36, y: 62 },
+  { x: 64, y: 62 },
+  { x: 90, y: 62 },
+
+  // Row 4
+  { x: 22, y: 82 },
+  { x: 50, y: 82 },
+  { x: 78, y: 82 },
 ];
 
 type Testimonial = typeof TESTIMONIALS[0];

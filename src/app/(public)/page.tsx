@@ -62,7 +62,7 @@ export default function HomePage() {
       <SuccessStories />
 
       {/* 6. Build Log Demo — animated fake terminal */}
-      <BuildLogDemo />
+      {/* <BuildLogDemo /> */}
 
       {/* 7. Final CTA — countdown + enroll button */}
       <FinalCTA />

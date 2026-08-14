@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Gugi } from "next/font/google";
 import { AuthProvider } from "@/lib/auth/AuthContext";
 import { AuthGateProvider } from "@/components/auth/AuthGateModal";
+import { CurrencyProvider } from "@/context/CurrencyContext";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import "./globals.css";
 
@@ -27,9 +28,11 @@ export default function RootLayout({
     <html lang="en" className={`h-full antialiased ${gugi.variable}`}>
       <body className="min-h-full flex flex-col bg-white text-[#1a1a1a]">
         <SmoothScroll />
-        <AuthProvider>
-          <AuthGateProvider>{children}</AuthGateProvider>
-        </AuthProvider>
+        <CurrencyProvider>
+          <AuthProvider>
+            <AuthGateProvider>{children}</AuthGateProvider>
+          </AuthProvider>
+        </CurrencyProvider>
       </body>
     </html>
   );

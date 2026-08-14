@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Course } from "@/types";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface FeeComparisonTableProps {
   courses: Course[];
@@ -15,6 +16,7 @@ const PREREQS: Record<string, string> = {
 export default function FeeComparisonTable({ courses }: FeeComparisonTableProps) {
   const published = courses.filter((c) => c.is_published);
   const [visible, setVisible] = useState<string[]>(published.map((c) => c.id));
+  const { formatPrice } = useCurrency();
 
   if (published.length < 2) return null;
 
@@ -86,7 +88,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Price</td>
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-mono text-xl font-bold text-[#1a1a1a]">
-                      ₹{c.price.toLocaleString("en-IN")}
+                      {formatPrice(c.price, c.priceMYR)}
                     </td>
                   ))}
                 </tr>

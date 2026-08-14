@@ -14,6 +14,7 @@ const emptyForm: FormState = {
   tools: [],
   duration_weeks: 8,
   price: 0,
+  priceMYR: 0,
   is_published: true,
 };
 
@@ -59,6 +60,7 @@ export default function AdminCoursesPage() {
       tools: course.tools,
       duration_weeks: course.duration_weeks,
       price: course.price,
+      priceMYR: course.priceMYR,
       is_published: course.is_published,
     });
     setToolsInput(course.tools.join(", "));
@@ -158,7 +160,14 @@ export default function AdminCoursesPage() {
                 placeholder="Price (₹)"
                 value={form.price}
                 onChange={(e) => setForm({ ...form, price: Number(e.target.value) })}
-                className="w-1/2 border-2 border-[#1a1a1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f5c518]"
+                className="w-1/3 border-2 border-[#1a1a1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f5c518]"
+              />
+              <input
+                type="number"
+                placeholder="Price (RM)"
+                value={form.priceMYR}
+                onChange={(e) => setForm({ ...form, priceMYR: Number(e.target.value) })}
+                className="w-1/3 border-2 border-[#1a1a1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f5c518]"
               />
             </div>
             <label className="flex items-center gap-2 text-sm font-bold">

@@ -25,6 +25,7 @@ export interface Course {
   tools: string[];
   duration_weeks: number;
   price: number;
+  priceMYR: number;
   is_published: boolean;
 }
 

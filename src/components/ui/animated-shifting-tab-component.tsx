@@ -5,6 +5,7 @@ import { FiArrowRight, FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import type { Course } from "@/types";
+import { useCurrency } from "@/context/CurrencyContext";
 
 interface ShiftingDropDownProps {
   courses: Course[];
@@ -193,7 +194,7 @@ const CourseDetails = ({ course }: { course: Course }) => {
           {course.duration_weeks} WEEKS
         </span>
         <span className="font-mono text-sm font-bold">
-          ₹{course.price.toLocaleString("en-IN")}
+          <PriceLabel course={course} />
         </span>
       </div>
       <p className="text-xs font-medium text-[#1a1a1a]/70 mb-4 line-clamp-2 leading-relaxed">
@@ -223,4 +224,9 @@ const CourseDetails = ({ course }: { course: Course }) => {
       </Link>
     </div>
   );
+};
+
+const PriceLabel = ({ course }: { course: Course }) => {
+  const { formatPrice } = useCurrency();
+  return <>{formatPrice(course.price, course.priceMYR)}</>;
 };

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaCheckCircle, FaHandshake, FaCog } from "react-icons/fa";
+import { FiCheck } from "react-icons/fi";
 
 const STATS = [
   { value: "250+", label: "Students Placed", color: "#6dec86" },
@@ -109,39 +111,19 @@ export default function OriginStory() {
               </div>
             </motion.div>
 
-            {/* Right — Stat Cards */}
+            {/* Right side — Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-              className="flex flex-col gap-5"
+              className="relative flex items-center justify-center w-full h-full min-h-[300px] lg:min-h-[500px]"
             >
-              {STATS.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.12, ease: "easeOut" }}
-                  whileHover={{
-                    translateX: 4,
-                    translateY: 4,
-                    boxShadow: "3px 3px 0px #1a1a1a",
-                  }}
-                  className="flex items-center gap-6 rounded-2xl border-4 border-[#1a1a1a] bg-white p-5 shadow-[7px_7px_0px_#1a1a1a] transition-all md:p-6"
-                >
-                  <span
-                    className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border-3 border-[#1a1a1a] text-2xl font-black text-[#1a1a1a] md:h-20 md:w-20 md:text-3xl"
-                    style={{ backgroundColor: stat.color }}
-                  >
-                    {stat.value}
-                  </span>
-                  <span className="text-lg font-bold text-[#1a1a1a] md:text-xl">
-                    {stat.label}
-                  </span>
-                </motion.div>
-              ))}
+              <img
+                src="https://ik.imagekit.io/g4lukt2ll/Genzcodemy/student_illustration%2002.png"
+                alt="Student Illustration"
+                className="w-full h-auto object-contain scale-[1.2] origin-center lg:origin-right "
+              />
             </motion.div>
           </div>
         </div>
