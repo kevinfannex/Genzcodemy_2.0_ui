@@ -148,7 +148,7 @@ export default function SavingsCalculator({
                   }`}
                   type="button"
                 >
-                  Malaysia
+                  Kuala Lumpur
                 </button>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function SavingsCalculator({
                     }`}
                     type="button"
                   >
-                    Python Full Stack
+                    Python Full Stack + GenAI
                   </button>
                 </div>
               </div>

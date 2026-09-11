@@ -13,6 +13,22 @@ const PREREQS: Record<string, string> = {
   "python-full-stack": "Some programming exposure",
 };
 
+const EXPECTED_SALARY: Record<string, string> = {
+  "data-analytics": "₹3–7 LPA",
+  "python-full-stack": "₹4–9 LPA",
+};
+
+
+const COURSE_OUTCOME: Record<string, string> = {
+  "data-analytics": "Analyze data, build dashboards, generate business insights",
+  "python-full-stack": "Build full-stack applications and integrate AI features",
+};
+
+const CAREER_PATHS: Record<string, string> = {
+  "data-analytics": "Data Analyst, BI Analyst, Reporting Analyst",
+  "python-full-stack": "Full Stack Developer, Python Developer, AI Application Developer",
+};
+
 export default function FeeComparisonTable({ courses }: FeeComparisonTableProps) {
   const published = courses.filter((c) => c.is_published);
   const [visible, setVisible] = useState<string[]>(published.map((c) => c.id));
@@ -125,6 +141,33 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-medium text-[#1a1a1a]/80">
                       {PREREQS[c.slug] ?? "Open to all"}
+                    </td>
+                  ))}
+                </tr>
+                {/* Expected Salary */}
+                <tr className="border-t-2 border-[#1a1a1a]/10 bg-[#faf9f5]">
+                  <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Expected Salary</td>
+                  {shownCourses.map((c) => (
+                    <td key={c.id} className="px-6 py-5 font-mono font-bold text-[#1a1a1a]">
+                      {EXPECTED_SALARY[c.slug] ?? "—"}
+                    </td>
+                  ))}
+                </tr>
+                {/* Course Outcome */}
+                <tr className="border-t-2 border-[#1a1a1a]/10">
+                  <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Course Outcome</td>
+                  {shownCourses.map((c) => (
+                    <td key={c.id} className="px-6 py-5 font-medium text-[#1a1a1a]/80">
+                      {COURSE_OUTCOME[c.slug] ?? "—"}
+                    </td>
+                  ))}
+                </tr>
+                {/* Career Paths */}
+                <tr className="border-t-2 border-[#1a1a1a]/10 bg-[#faf9f5]">
+                  <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Career Paths</td>
+                  {shownCourses.map((c) => (
+                    <td key={c.id} className="px-6 py-5 font-medium text-[#1a1a1a]/80">
+                      {CAREER_PATHS[c.slug] ?? "—"}
                     </td>
                   ))}
                 </tr>

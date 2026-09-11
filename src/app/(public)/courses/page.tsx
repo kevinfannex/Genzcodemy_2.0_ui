@@ -25,7 +25,7 @@ const FALLBACK_COURSES: Course[] = [
   {
     id: "python-full-stack",
     slug: "python-full-stack",
-    title: "Python Full Stack",
+    title: "Python Full Stack + GenAI",
     description: "FastAPI, React, Postgres � ship a real product end to end.",
     tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL" ],
     duration_weeks: 12,
@@ -102,7 +102,7 @@ export default async function CoursesPage() {
                       <CoursePrice priceINR={course.price} priceMYR={course.priceMYR} />
                     </p>
                     <span className="flex items-center gap-2 font-bold text-[#1a1a1a] transition-colors">
-                      View details <span className="text-xl leading-none transition-transform group-hover:translate-x-1">?</span>
+                      View details
                     </span>
                   </div>
                 </Link>

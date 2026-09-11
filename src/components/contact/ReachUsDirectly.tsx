@@ -34,9 +34,14 @@ export default function ReachUsDirectly() {
             // call_us
           </h3>
           {/* TODO: Replace with real phone number */}
-          <a href="tel:+919876543210" className="text-lg font-bold hover:underline">
-            +91 8667668425
-          </a>
+          <div className="flex flex-col gap-2">
+            <a href="tel:+918667668425" className="text-lg font-bold hover:underline">
+              🇮🇳 India: +91 8667668425
+            </a>
+            <a href="tel:+60147644153" className="text-lg font-bold hover:underline">
+              🇲🇾 Malaysia: +60 147644153
+            </a>
+          </div>
         </div>
 
         <div>
@@ -70,14 +75,6 @@ export default function ReachUsDirectly() {
               className="text-white/60 hover:text-white hover:underline"
             >
               LinkedIn
-            </a>
-            <a
-              href="https://github.com/genzcodemy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white hover:underline"
-            >
-              GitHub
             </a>
           </div>
         </div>

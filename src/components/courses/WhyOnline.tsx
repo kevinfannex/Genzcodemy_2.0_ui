@@ -43,7 +43,7 @@ export default function WhyOnline() {
   };
 
   return (
-    <section className="bg-[#f8f7f2] px-6 py-20 text-[#1a1a1a] overflow-hidden">
+    <section className="bg-[#f8f7f2] px-6 py-20 text-[#1a1a1a] overflow-hidden border-y-[5px] border-[#1a1a1a]">
       <motion.div 
         className="mx-auto max-w-5xl"
         variants={containerVariants}

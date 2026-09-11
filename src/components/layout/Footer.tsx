@@ -189,10 +189,19 @@ export default function Footer() {
                   <Mail size={16} className="shrink-0" />
                   connect@genzcodemy.com
                 </a>
-                <a href="tel:8667668425" className="flex items-center gap-3 transition-colors hover:text-[#f5c518]">
+                <div className="flex items-center gap-3">
                   <Phone size={16} className="shrink-0" />
-                  8667668425
+                  <span>
+                 <a href="tel:+918667668425" className=" transition-colors hover:text-[#f5c518]">
+                  🇮🇳 +91 8667668425
+                </a> 
+                <br />
+                <a href="tel:+60147644153" className=" transition-colors hover:text-[#f5c518]">
+                  🇲🇾 +60 147644153
                 </a>
+                  </span>
+                </div>
+               
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="shrink-0 mt-0.5" />
                   <span>

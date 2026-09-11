@@ -101,7 +101,7 @@ export default function OriginStory() {
                     Data Analytics
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#ff4a7e]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
-                     Python Full Stack Dev 
+                     Python Full Stack + GenAI 
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#f5c518]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
                     Testing
@@ -133,13 +133,6 @@ export default function OriginStory() {
       <section className="relative overflow-hidden border-b-4 border-[#1a1a1a] bg-[#1a1a1a] px-6 py-24 lg:py-32">
         {/* Dark grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:48px_48px]" />
-
-        {/* Floating accent — right */}
-        <motion.div
-          animate={{ y: [0, 12, 0], rotate: [-6, -10, -6] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-8 top-20 z-0 hidden h-24 w-24 rounded-full border-4 border-[#f5c518] bg-[#f5c518]/10 lg:block"
-        />
 
         <div className="relative z-10 mx-auto max-w-7xl">
           {/* Section Header */}

@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { useCurrency } from "@/context/CurrencyContext";
+import { label } from "framer-motion/client";
 
 /* ───────────────────────────────────────────────
    Configurable pricing per column & currency
@@ -179,7 +180,7 @@ export default function CompareOptions() {
                 </td>
               </motion.tr>
               {ROWS.map((row, i) => (
-                
+
                 <motion.tr variants={itemVariants} key={row.label} className="group transition-colors hover:bg-[#1a1a1a]/[0.03]">
                   <td className="border-2 border-[#1a1a1a] p-5 font-bold text-sm">{row.label}</td>
                   <td className="border-2 border-[#1a1a1a] bg-[#f5c518]/10 p-5 text-sm font-medium">
