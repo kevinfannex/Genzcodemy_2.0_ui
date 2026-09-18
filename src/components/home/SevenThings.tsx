@@ -16,7 +16,7 @@ const ENTRIES: Entry[] = [
   {
     question: "Will I get to work on real-world projects?",
     answer:
-      "Yes. Practical learning is a key part of the journey. Every course includes hands-on projects using tools like React, Python, FastAPI, SQL, Power BI, and Gen AI — helping you apply knowledge to real industry scenarios.",
+      "Yes. Practical learning is a key part of the journey. Every course includes hands-on projects using tools like React, Python, FastAPI, SQL, Power BI, and Gen AI   helping you apply knowledge to real industry scenarios.",
   },
   {
     question: "Are there job opportunities for freshers?",
@@ -26,7 +26,7 @@ const ENTRIES: Entry[] = [
   {
     question: "What if I find the concepts difficult to understand?",
     answer:
-      "You won't have to learn alone. GenzCodemy mentors and trainers will guide you, clarify your doubts, and help you progress at a comfortable pace — with weekly doubt-clearing sessions and recorded resources.",
+      "You won't have to learn alone. GenzCodemy mentors and trainers will guide you, clarify your doubts, and help you progress at a comfortable pace   with weekly doubt-clearing sessions and recorded resources.",
   },
   {
     question: "Will I get a certificate after completing the course?",
@@ -61,16 +61,16 @@ export default function SevenThings() {
           <div className="md:col-span-7">
             <h2 className="text-4xl font-black leading-tight text-[#1a1a1a] sm:text-5xl md:text-6xl md:leading-[1.1] tracking-tight">
               The things that turn learners into{" "}
-             <motion.span
-                  className="inline-block -rotate-1 border-2 border-[#1a1a1a] bg-[#f5c518] px-3 py-1 shadow-[4px_4px_0px_#1a1a1a]"
-                  initial={{ rotate: 4, scale: 0.85, opacity: 0 }}
-                  whileInView={{ rotate: -1, scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.35, ease: "backOut" }}
-                >
-                  Job Ready
-                </motion.span>{" "}
-              
+              <motion.span
+                className="inline-block -rotate-1 border-2 border-[#1a1a1a] bg-[#f5c518] px-3 py-1 shadow-[4px_4px_0px_#1a1a1a]"
+                initial={{ rotate: 4, scale: 0.85, opacity: 0 }}
+                whileInView={{ rotate: -1, scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.35, ease: "backOut" }}
+              >
+                Job Ready
+              </motion.span>{" "}
+
               professionals.
             </h2>
           </div>
@@ -98,9 +98,9 @@ export default function SevenThings() {
               {/* Horizontal rule above each row */}
               <div className="border-t border-[#1a1a1a]/15" />
 
-              {/* Row — full-width hover bg */}
+              {/* Row   full-width hover bg */}
               <div className="grid grid-cols-1 gap-6 px-4 py-8 transition-colors duration-300 group-hover:bg-[#FAF5E7] md:grid-cols-2 md:gap-16 md:px-6">
-                {/* Left — italic question */}
+                {/* Left   italic question */}
                 <p
                   className="text-lg font-semibold italic leading-snug text-[#3a3028]"
                   style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
@@ -108,7 +108,7 @@ export default function SevenThings() {
                   &ldquo;{entry.question}&rdquo;
                 </p>
 
-                {/* Right — plain answer */}
+                {/* Right   plain answer */}
                 <p className="text-sm font-medium leading-relaxed text-[#1a1a1a]/60">
                   {entry.answer}
                 </p>

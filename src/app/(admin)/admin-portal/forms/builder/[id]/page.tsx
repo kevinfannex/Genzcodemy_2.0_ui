@@ -117,7 +117,7 @@ export default function FormBuilderPage() {
             onChange={(e) => setVisibility(e.target.value as FormVisibility)}
             className="border-2 border-[#1a1a1a] px-3 py-2"
           >
-            <option value="restricted">Restricted — grant access per student</option>
+            <option value="restricted">Restricted   grant access per student</option>
             <option value="all_students">All students</option>
           </select>
         </div>

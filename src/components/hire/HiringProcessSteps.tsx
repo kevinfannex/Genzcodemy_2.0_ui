@@ -48,7 +48,7 @@ export default function HiringProcessSteps() {
               transition={{ duration: 0.4, delay: i * 0.15 }}
               className="relative flex-1"
             >
-              {/* Connector line — desktop only, not after last */}
+              {/* Connector line   desktop only, not after last */}
               {/* {i < STEPS.length - 1 && (
                 <div className="absolute right-0 top-6 hidden h-px w-1/2 border-t-2 border-dashed border-white/20 md:block" />
               )} */}

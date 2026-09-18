@@ -16,7 +16,7 @@ const FALLBACK_COURSES: Course[] = [
     slug: "data-analytics",
     title: "Data Analytics",
     description: "SQL, Python, Pandas, Power BI  from raw data to decisions.",
-    tools: ["Microsoft Excel", "SQL", "Power BI", "Power Query","DAX"],
+    tools: ["Microsoft Excel", "SQL", "Power BI", "Power Query", "DAX"],
     duration_weeks: 12,
     price: 15000,
     priceMYR: 1000,
@@ -25,9 +25,9 @@ const FALLBACK_COURSES: Course[] = [
   {
     id: "python-full-stack",
     slug: "python-full-stack",
-    title: "Python Full Stack + GenAI",
+    title: "Python Full Stack + Gen AI",
     description: "FastAPI, React, Postgres � ship a real product end to end.",
-    tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI","PostgreSQL", "OpenAI API","Claude API", "NextJS","GraphQL" ],
+    tools: ["HTML / CSS", "JavaScript", "ReactJS", "Python", "FastAPI", "PostgreSQL", "OpenAI API", "Claude API", "NextJS", "GraphQL"],
     duration_weeks: 12,
     price: 20000,
     priceMYR: 1500,
@@ -69,23 +69,23 @@ export default async function CoursesPage() {
               >
                 {/* Decorative background shadow block */}
                 <div className="absolute inset-0 translate-x-[8px] translate-y-[8px] bg-[#1a1a1a] transition-transform group-hover:translate-x-[4px] group-hover:translate-y-[4px]"></div>
-                
+
                 <Link
                   href={`/courses/${course.slug}`}
                   className="relative flex flex-col h-full border-2 border-[#1a1a1a] bg-white p-8 transition-transform group-hover:translate-x-[4px] group-hover:translate-y-[4px]"
                 >
                   <div className="flex justify-between items-start mb-6">
                     <span className="inline-block border-2 border-[#1a1a1a] bg-[#f5c518] px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest shadow-[2px_2px_0px_#1a1a1a]">
-                      {course.is_published ? "Enrolling now" : "Coming soon"}
+                      {course.is_published ? " Enroll now" : "Coming soon"}
                     </span>
                     <span className="font-mono text-xs uppercase text-[#1a1a1a]/40 font-bold mt-1">
                       {course.duration_weeks} weeks
                     </span>
                   </div>
-                  
+
                   <h2 className="mb-4 text-3xl font-black md:text-4xl">{course.title}</h2>
                   <p className="mb-8 text-lg font-medium leading-relaxed text-[#1a1a1a]/70 flex-grow">{course.description}</p>
-                  
+
                   <div className="mb-8 flex flex-wrap gap-2">
                     {course.tools.map((t) => (
                       <span
@@ -96,7 +96,7 @@ export default async function CoursesPage() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="mt-auto flex items-center justify-between border-t-2 border-[#1a1a1a]/10 pt-6">
                     <p className="font-mono text-lg font-bold">
                       <CoursePrice priceINR={course.price} priceMYR={course.priceMYR} />

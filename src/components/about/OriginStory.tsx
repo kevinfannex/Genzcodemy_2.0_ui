@@ -14,7 +14,7 @@ const MILESTONES = [
   {
     number: "01",
     title: "The Problem We Saw",
-    body: "While studying engineering, our founder faced a stark reality — most technical institutes were profit‑driven, treating students as revenue sources rather than individuals deserving quality education and real career opportunities.",
+    body: "While studying engineering, our founder faced a stark reality   most technical institutes were profit‑driven, treating students as revenue sources rather than individuals deserving quality education and real career opportunities.",
     accent: "#ff4a7e",
   },
   {
@@ -26,7 +26,7 @@ const MILESTONES = [
   {
     number: "03",
     title: "The GENZCODEMY Answer",
-    body: "We founded GENZCODEMY on one mission: transform student careers. Exceptional coaching, real placement opportunities, and unwavering support — so every learner can confidently land a rewarding job or launch their own venture.",
+    body: "We founded GENZCODEMY on one mission: transform student careers. Exceptional coaching, real placement opportunities, and unwavering support   so every learner can confidently land a rewarding job or launch their own venture.",
     accent: "#f5c518",
   },
 ];
@@ -39,14 +39,14 @@ export default function OriginStory() {
         {/* Subtle grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a06_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a06_1px,transparent_1px)] bg-[size:48px_48px]" />
 
-        {/* Floating accent shape — top-right */}
+        {/* Floating accent shape   top-right */}
         <motion.div
           animate={{ y: [0, -14, 0], rotate: [12, 16, 12] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -right-6 top-12 z-0 hidden h-28 w-28 rounded-3xl border-4 border-[#1a1a1a] bg-[#f5c518] shadow-[6px_6px_0px_#1a1a1a] lg:block"
         />
 
-        {/* Floating accent shape — bottom-left */}
+        {/* Floating accent shape   bottom-left */}
         <motion.div
           animate={{ y: [0, 10, 0], rotate: [-8, -12, -8] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -55,7 +55,7 @@ export default function OriginStory() {
 
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
-            {/* Left — Heading & Body */}
+            {/* Left   Heading & Body */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -101,17 +101,17 @@ export default function OriginStory() {
                     Data Analytics
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#ff4a7e]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
-                     Python Full Stack + GenAI 
+                    Python Full Stack + Gen AI
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#f5c518]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
                     Testing
                   </span>{" "}
-                  — combining theory with hands‑on project experience.
+                  combining theory with hands‑on project experience.
                 </p>
               </div>
             </motion.div>
 
-            {/* Right side — Illustration */}
+            {/* Right side   Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}

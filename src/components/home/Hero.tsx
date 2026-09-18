@@ -229,7 +229,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
                 className="absolute -bottom-4 -right-4 z-30 inline-flex items-center gap-2 rounded-full border-4 border-[#1a1a1a] bg-[#6dec86] px-5 py-2 font-mono text-sm font-black shadow-[4px_4px_0px_#1a1a1a]"
               >
-                <span className="text-lg">🚀</span> Next batch starting soon
+                 Next batch starting soon
               </motion.div>
 
             </div>

@@ -36,7 +36,7 @@ export default function FillFormPage() {
       setError(
         err instanceof ApiRequestError
           ? err.message
-          : "Couldn't submit — check required fields and try again."
+          : "Couldn't submit   check required fields and try again."
       );
     } finally {
       setSubmitting(false);
@@ -57,7 +57,7 @@ export default function FillFormPage() {
     return (
       <div className="border-2 border-[#1a1a1a] p-8 text-center shadow-[8px_8px_0px_#1a1a1a]">
         <h1 className="text-2xl font-black">Response submitted ✓</h1>
-        <p className="mt-2 text-[#1a1a1a]/70">Thanks — we&apos;ve got it.</p>
+        <p className="mt-2 text-[#1a1a1a]/70">Thanks   we&apos;ve got it.</p>
       </div>
     );
   }
@@ -83,13 +83,13 @@ export default function FillFormPage() {
 
               {(field.field_type === "short_text" ||
                 field.field_type === "date") && (
-                <input
-                  type={field.field_type === "date" ? "date" : "text"}
-                  required={field.is_required}
-                  onChange={(e) => setAnswer(field.id, e.target.value)}
-                  className="w-full border-2 border-[#1a1a1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f5c518]"
-                />
-              )}
+                  <input
+                    type={field.field_type === "date" ? "date" : "text"}
+                    required={field.is_required}
+                    onChange={(e) => setAnswer(field.id, e.target.value)}
+                    className="w-full border-2 border-[#1a1a1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#f5c518]"
+                  />
+                )}
 
               {field.field_type === "long_text" && (
                 <textarea
@@ -164,9 +164,8 @@ export default function FillFormPage() {
                       key={n}
                       type="button"
                       onClick={() => setAnswer(field.id, String(n))}
-                      className={`h-10 w-10 border-2 border-[#1a1a1a] font-bold ${
-                        answers[field.id] === String(n) ? "bg-[#f5c518]" : ""
-                      }`}
+                      className={`h-10 w-10 border-2 border-[#1a1a1a] font-bold ${answers[field.id] === String(n) ? "bg-[#f5c518]" : ""
+                        }`}
                     >
                       {n}
                     </button>
@@ -176,7 +175,7 @@ export default function FillFormPage() {
 
               {field.field_type === "file_upload" && (
                 <p className="text-sm text-[#1a1a1a]/50">
-                  File upload — wired once Storage endpoint is available.
+                  File upload   wired once Storage endpoint is available.
                 </p>
               )}
             </div>

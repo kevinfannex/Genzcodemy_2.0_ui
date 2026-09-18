@@ -199,7 +199,7 @@ export default function SavingsCalculator({
                     }`}
                     type="button"
                   >
-                    Python Full Stack + GenAI
+                    Python Full Stack + Gen AI
                   </button>
                 </div>
               </div>

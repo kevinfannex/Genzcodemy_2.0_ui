@@ -81,7 +81,7 @@ export default async function CourseDetailPage({
                 <div className="relative border-2 border-[#1a1a1a] bg-white p-8 sm:p-10">
                   <div className="flex justify-between items-start mb-6">
                     <span className="inline-block border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest">
-                      {course.is_published ? "Enrolling now" : "Coming soon"}
+                      {course.is_published ? " Enroll now" : "Coming soon"}
                     </span>
                     <span className="font-mono text-xs font-bold uppercase text-[#1a1a1a]/50">
                       {course.duration_weeks} weeks

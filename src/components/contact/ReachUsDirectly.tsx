@@ -50,7 +50,7 @@ export default function ReachUsDirectly() {
           </h3>
           {/* TODO: Replace with real office hours */}
           <p className="text-sm text-white/70">
-            Monday — Saturday: 10:00 AM — 7:00 PM IST
+            Monday   Saturday: 10:00 AM   7:00 PM IST
           </p>
         </div>
 

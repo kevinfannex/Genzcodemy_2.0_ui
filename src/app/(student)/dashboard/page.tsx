@@ -18,19 +18,19 @@ export default function DashboardOverviewPage() {
           <p className="font-mono text-xs uppercase text-[#1a1a1a]/50">
             Active courses
           </p>
-          <p className="mt-2 text-3xl font-black">—</p>
+          <p className="mt-2 text-3xl font-black"> </p>
         </div>
         <div className="border-2 border-[#1a1a1a] p-5 shadow-[6px_6px_0px_#1a1a1a]">
           <p className="font-mono text-xs uppercase text-[#1a1a1a]/50">
             Pending bookings
           </p>
-          <p className="mt-2 text-3xl font-black">—</p>
+          <p className="mt-2 text-3xl font-black"> </p>
         </div>
         <div className="border-2 border-[#1a1a1a] p-5 shadow-[6px_6px_0px_#1a1a1a]">
           <p className="font-mono text-xs uppercase text-[#1a1a1a]/50">
             Forms to fill
           </p>
-          <p className="mt-2 text-3xl font-black">—</p>
+          <p className="mt-2 text-3xl font-black"> </p>
         </div>
       </div>
     </div>

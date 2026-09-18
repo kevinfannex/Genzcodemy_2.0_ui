@@ -31,7 +31,7 @@ export default function EmployerHero() {
           {/* TODO: Replace with real copy */}
           Every <span style={{ fontFamily: "var(--font-gugi)" }}>Genzcodemy</span> graduate has shipped a real capstone project, worked
           through a mentor-reviewed codebase, and interviewed against production
-          scenarios — not whiteboard puzzles.
+          scenarios   not whiteboard puzzles.
         </p>
 
         {/* Partner logo strip */}

@@ -13,6 +13,7 @@ import BuildLogDemo from "@/components/home/BuildLogDemo";
 import FinalCTA from "@/components/home/FinalCTA";
 import CareerModal from "@/components/home/CareerModal";
 import Journey from "@/components/home/Journey";
+import Evidence from "@/components/home/Evidence";
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,36 +36,39 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Career Modal — auto-triggers 3s after load, once per session */}
+      {/* Career Modal   auto-triggers 3s after load, once per session */}
       <AnimatePresence>
         {isModalOpen && <CareerModal onClose={handleCloseModal} />}
       </AnimatePresence>
 
-      {/* 1. Hero — rotating tagline + count-up stat + existing enroll logic */}
+      {/* 1. Hero   rotating tagline + count-up stat + existing enroll logic */}
       <Hero />
 
-      {/* 2. Why Genzcodemy — 3-card staggered grid */}
+      {/* 2. Why Genzcodemy   3-card staggered grid */}
       <WhyGenzcodemy />
 
-      {/* 3. Tech Stack Marquee — auto-scrolling tool names */}
+      {/* 3. Tech Stack Marquee   auto-scrolling tool names */}
       <TechStackMarquee />
 
-      {/* 4. Popular Courses — flip cards with curriculum reveal */}
+      {/* 4. Popular Courses   flip cards with curriculum reveal */}
       <PopularCourses />
 
       {/* 5. Six Things that actually help you get hired */}
       <SixThings />
 
-      {/* 6. Journey — 3-step career roadmap */}
+      {/* 6. Evidence   placement stats */}
+      <Evidence />
+
+      {/* 7. Journey   3-step career roadmap */}
       <Journey />
 
-      {/* 7. Success Stories — horizontal drag-scroll carousel */}
+      {/* 7. Success Stories   horizontal drag-scroll carousel */}
       <SuccessStories />
 
-      {/* 6. Build Log Demo — animated fake terminal */}
+      {/* 6. Build Log Demo   animated fake terminal */}
       {/* <BuildLogDemo /> */}
 
-      {/* 7. Final CTA — countdown + enroll button */}
+      {/* 7. Final CTA   countdown + enroll button */}
       <FinalCTA />
     </>
   );

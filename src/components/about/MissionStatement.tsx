@@ -11,7 +11,7 @@ export default function MissionStatement() {
         </p>
 
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
-          {/* Left — Text content */}
+          {/* Left   Text content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -19,7 +19,7 @@ export default function MissionStatement() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
             className="flex-1"
           >
-            {/* Oversized bold sentence — key word italicised + yellow */}
+            {/* Oversized bold sentence   key word italicised + yellow */}
             <p
               className="font-black leading-[1.05] tracking-tight text-[#1a1a1a]"
               style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}
@@ -35,7 +35,7 @@ export default function MissionStatement() {
             </p>
           </motion.div>
 
-          {/* Right — Mission image */}
+          {/* Right   Mission image */}
           <div className="relative w-full max-w-md flex-shrink-0 lg:w-[420px]">
             <motion.div
               initial={{ opacity: 0, x: 40 }}
@@ -46,7 +46,7 @@ export default function MissionStatement() {
             >
               <img
                 src="https://ik.imagekit.io/g4lukt2ll/Genzcodemy/Mission_statement.png"
-                alt="Genzcodemy Mission — We teach people to build"
+                alt="Genzcodemy Mission   We teach people to build"
                 className="w-full h-auto object-contain scale-[1.2] origin-center lg:origin-right"
               />
             </motion.div>

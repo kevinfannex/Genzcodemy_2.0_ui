@@ -19,7 +19,7 @@ const CurrencyContext = createContext<CurrencyContextValue | undefined>(undefine
 const STORAGE_KEY = "genzcodemy_currency";
 
 /* ───────────────────────────────────────────────
-   Provider — wraps the app
+   Provider   wraps the app
    ─────────────────────────────────────────────── */
 export function CurrencyProvider({ children }: { children: ReactNode }) {
   const [currency, setCurrencyState] = useState<Currency>("INR");
@@ -32,7 +32,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         setCurrencyState(stored);
       }
     } catch {
-      // SSR or storage blocked — keep default
+      // SSR or storage blocked   keep default
     }
   }, []);
 
@@ -60,7 +60,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
 }
 
 /* ───────────────────────────────────────────────
-   Hook — consume the context
+   Hook   consume the context
    ─────────────────────────────────────────────── */
 export function useCurrency() {
   const ctx = useContext(CurrencyContext);

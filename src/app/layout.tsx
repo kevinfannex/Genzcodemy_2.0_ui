@@ -14,7 +14,7 @@ const gugi = Gugi({
 });
 
 export const metadata: Metadata = {
-  title: "Genzcodemy — Learn to Ship, Not Just to Study",
+  title: "Genzcodemy   Learn to Ship, Not Just to Study",
   description:
     "Genzcodemy is an edtech platform training the next generation of developers and analysts through project-first, mentor-led courses.",
 };

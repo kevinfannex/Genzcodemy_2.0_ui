@@ -2,6 +2,7 @@
 
 import { useAuth } from "@/lib/auth/AuthContext";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import StaggeredMenu from "./StaggeredMenu";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -11,7 +12,7 @@ import { coursesApi } from "@/lib/api/courses";
 import CurrencyToggle from "./CurrencyToggle";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
+  // { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
   { href: "/about", label: "About" },
   { href: "/hire-from-us", label: "Hire from us" },
@@ -20,6 +21,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const { user, loading } = useAuth();
+  const pathname = usePathname();
   const [courses, setCourses] = useState<Course[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<number | null>(null);
@@ -112,6 +114,14 @@ export default function Header() {
                               <span className="text-[#1a1a1a]/40">→</span>
                             </Link>
                           ))}
+                          
+                          <Link
+                            href="/courses/how-it-works"
+                            className="flex items-center justify-between px-5 py-4 text-sm font-black text-[#f5c518] bg-[#1a1a1a] transition-all hover:bg-[#333] hover:pl-7 border-t-2 border-[#1a1a1a]"
+                          >
+                            <span>How it Works</span>
+                            <span className="text-[#f5c518]/60">→</span>
+                          </Link>
                         </div>
                       </motion.div>
                     )}
@@ -135,13 +145,13 @@ export default function Header() {
         {/* Desktop Currency Toggle + Auth Button */}
         {!loading && (
           <div className="hidden md:flex items-center gap-4">
-            <CurrencyToggle />
-            <Link
+            {pathname?.startsWith("/courses") && <CurrencyToggle />}
+            {/* <Link
               href={user ? "/dashboard" : "/login"}
               className="border-2 border-[#1a1a1a] bg-[#1a1a1a] px-4 py-2 text-sm font-bold text-white shadow-[4px_4px_0px_#f5c518] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
             >
               {user ? "Dashboard" : "Log in"}
-            </Link>
+            </Link> */}
           </div>
         )}
 

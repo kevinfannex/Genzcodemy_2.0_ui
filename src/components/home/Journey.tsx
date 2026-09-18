@@ -5,9 +5,9 @@ import type { Variants } from "framer-motion";
 
 /* ── Icons ── */
 const icons = [
-  <svg key="01" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>,
-  <svg key="02" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>,
-  <svg key="03" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>,
+  <svg key="01" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></svg>,
+  <svg key="02" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 3 21 3 21 8" /><line x1="4" y1="20" x2="21" y2="3" /><polyline points="21 16 21 21 16 21" /><line x1="15" y1="15" x2="21" y2="21" /></svg>,
+  <svg key="03" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>,
 ];
 
 const STEPS = [
@@ -82,7 +82,7 @@ export default function Journey() {
           viewport={{ once: true, amount: 0.3 }}
           className="mb-16"
         >
-          {/* Developer label — slides up */}
+          {/* Developer label   slides up */}
           <motion.p
             variants={headerChild}
             className="mb-5 font-mono text-[11px] font-black uppercase tracking-widest text-[#1a1a1a]/40"
@@ -94,7 +94,7 @@ export default function Journey() {
             <motion.div variants={headerChild} className="md:col-span-7">
               <h2 className="text-4xl font-black leading-[1.1] tracking-tight text-[#1a1a1a] sm:text-5xl md:text-6xl">
                 Learn.{" "}
-                {/* Yellow stamp — rotates in */}
+                {/* Yellow stamp   rotates in */}
                 <motion.span
                   className="inline-block -rotate-1 border-2 border-[#1a1a1a] bg-[#f5c518] px-3 py-1 shadow-[4px_4px_0px_#1a1a1a]"
                   initial={{ rotate: 4, scale: 0.85, opacity: 0 }}
@@ -165,35 +165,35 @@ export default function Journey() {
               {/* ── Card body ── */}
               <div className="flex flex-col p-6">
                 <div className="flex items-center gap-5">
-                {/* Icon box — pops in with a bounce */}
-                <motion.div
-                  className="mb-6 inline-flex h-11 w-11 items-center justify-center border-2 border-[#1a1a1a] bg-[#f5c518] text-[#1a1a1a] shadow-[2px_2px_0px_#1a1a1a]"
-                  initial={{ scale: 0, rotate: -12 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.45,
-                    delay: i * 0.18 + 0.25,
-                    ease: "backOut",
-                  }}
-                  whileHover={{ rotate: [0, -8, 8, 0], transition: { duration: 0.4 } }}
-                >
-                  {icons[i]}
-                  
-                </motion.div>
+                  {/* Icon box   pops in with a bounce */}
+                  <motion.div
+                    className="mb-6 inline-flex h-11 w-11 items-center justify-center border-2 border-[#1a1a1a] bg-[#f5c518] text-[#1a1a1a] shadow-[2px_2px_0px_#1a1a1a]"
+                    initial={{ scale: 0, rotate: -12 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.45,
+                      delay: i * 0.18 + 0.25,
+                      ease: "backOut",
+                    }}
+                    whileHover={{ rotate: [0, -8, 8, 0], transition: { duration: 0.4 } }}
+                  >
+                    {icons[i]}
 
-                {/* Title — slides up */}
-                <motion.h3
-                  className="mb-3 text-xl font-black leading-snug text-[#1a1a1a]"
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: i * 0.18 + 0.35, ease: "easeOut" }}
-                >
-                  {step.title}
-                </motion.h3>
+                  </motion.div>
+
+                  {/* Title   slides up */}
+                  <motion.h3
+                    className="mb-3 text-xl font-black leading-snug text-[#1a1a1a]"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.45, delay: i * 0.18 + 0.35, ease: "easeOut" }}
+                  >
+                    {step.title}
+                  </motion.h3>
                 </div>
-                {/* Description — fades in */}
+                {/* Description   fades in */}
                 <motion.p
                   className="mb-6 flex-1 text-sm font-medium leading-relaxed text-[#1a1a1a]/55"
                   initial={{ opacity: 0 }}
@@ -204,7 +204,7 @@ export default function Journey() {
                   {step.description}
                 </motion.p>
 
-                {/* Tags — stagger in left-to-right */}
+                {/* Tags   stagger in left-to-right */}
                 <motion.div
                   className="flex flex-wrap gap-2 border-t border-[#1a1a1a]/10 pt-2"
                   variants={tagVariants}

@@ -46,7 +46,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
   return (
     <section className="relative border-b-2 border-[#1a1a1a] bg-[#faf9f5] px-6 py-24 overflow-hidden">
       {/* Background grid pattern */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `linear-gradient(to right, #1a1a1a10 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a10 1px, transparent 1px)`,
@@ -67,11 +67,10 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
           {published.map((c) => (
             <label
               key={c.id}
-              className={`flex cursor-pointer items-center gap-3 border-2 border-[#1a1a1a] px-5 py-2.5 font-bold text-sm transition-all select-none ${
-                visible.includes(c.id) 
-                  ? "bg-[#f5c518] shadow-[4px_4px_0px_#1a1a1a]" 
+              className={`flex cursor-pointer items-center gap-3 border-2 border-[#1a1a1a] px-5 py-2.5 font-bold text-sm transition-all select-none ${visible.includes(c.id)
+                  ? "bg-[#f5c518] shadow-[4px_4px_0px_#1a1a1a]"
                   : "bg-white text-[#1a1a1a]/60 hover:bg-gray-50"
-              }`}
+                }`}
             >
               <input
                 type="checkbox"
@@ -149,7 +148,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Expected Salary</td>
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-mono font-bold text-[#1a1a1a]">
-                      {EXPECTED_SALARY[c.slug] ?? "—"}
+                      {EXPECTED_SALARY[c.slug] ?? " "}
                     </td>
                   ))}
                 </tr>
@@ -158,7 +157,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Course Outcome</td>
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-medium text-[#1a1a1a]/80">
-                      {COURSE_OUTCOME[c.slug] ?? "—"}
+                      {COURSE_OUTCOME[c.slug] ?? " "}
                     </td>
                   ))}
                 </tr>
@@ -167,7 +166,7 @@ export default function FeeComparisonTable({ courses }: FeeComparisonTableProps)
                   <td className="px-6 py-5 font-bold text-[#1a1a1a]/60">Career Paths</td>
                   {shownCourses.map((c) => (
                     <td key={c.id} className="px-6 py-5 font-medium text-[#1a1a1a]/80">
-                      {CAREER_PATHS[c.slug] ?? "—"}
+                      {CAREER_PATHS[c.slug] ?? " "}
                     </td>
                   ))}
                 </tr>

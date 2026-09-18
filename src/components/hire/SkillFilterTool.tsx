@@ -18,11 +18,11 @@ export default function SkillFilterTool() {
     active.length === 0
       ? GRADUATES
       : GRADUATES.filter((g) => {
-          if (active.includes("Both")) return true;
-          if (active.includes("Data Analytics") && g.track === "Data Analytics") return true;
-          if (active.includes("Full Stack") && g.track === "Full Stack") return true;
-          return false;
-        });
+        if (active.includes("Both")) return true;
+        if (active.includes("Data Analytics") && g.track === "Data Analytics") return true;
+        if (active.includes("Full Stack") && g.track === "Full Stack") return true;
+        return false;
+      });
 
   return (
     <div>
@@ -36,11 +36,10 @@ export default function SkillFilterTool() {
             <button
               key={f}
               onClick={() => toggle(f)}
-              className={`border-2 border-[#1a1a1a] px-4 py-1.5 font-mono text-xs font-bold transition ${
-                active.includes(f)
+              className={`border-2 border-[#1a1a1a] px-4 py-1.5 font-mono text-xs font-bold transition ${active.includes(f)
                   ? "bg-[#1a1a1a] text-white shadow-[3px_3px_0px_#f5c518]"
                   : "bg-white text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white"
-              }`}
+                }`}
             >
               {f}
             </button>
@@ -56,7 +55,7 @@ export default function SkillFilterTool() {
         </div>
       </div>
 
-      {/* Filtered grid — GraduateShowcase accepts a graduates prop */}
+      {/* Filtered grid   GraduateShowcase accepts a graduates prop */}
       <GraduateShowcase graduates={filtered} />
     </div>
   );

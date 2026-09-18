@@ -1,4 +1,4 @@
-﻿// No booking flow found in the project — linking to /contact?type=intro-call
+﻿// No booking flow found in the project   linking to /contact?type=intro-call
 // TODO: If a booking system is added, replace the href with the booking page URL
 
 import Link from "next/link";
@@ -21,7 +21,7 @@ export default function LowCommitmentCTA() {
 
         <p className="mx-auto mt-6 max-w-xl text-lg text-white/60">
           {/* TODO: Replace with real copy */}
-          Book a free 20-minute intro call. No sales pitch — just a chance to
+          Book a free 20-minute intro call. No sales pitch   just a chance to
           ask questions, see our curriculum, and decide if this is the right
           move for you.
         </p>

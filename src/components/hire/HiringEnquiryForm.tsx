@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * DECISION POINT — Auth gate for employer enquiry form:
+ * DECISION POINT   Auth gate for employer enquiry form:
  *
  * The current site gates all form submissions behind useAuthGate() (see ContactPage).
  * However, employers/recruiters should NOT need a student account to submit a
@@ -14,7 +14,7 @@
  *
  * For now, we call enquiriesApi.submit() with source_page "/hire-from-us"
  * exactly as ContactPage does, but WITHOUT requireAuth(). The backend
- * may or may not accept unauthenticated requests — flag this with the
+ * may or may not accept unauthenticated requests   flag this with the
  * backend team.
  *
  * TODO: Confirm with backend whether POST /enquiries accepts unauthenticated calls.
@@ -107,7 +107,7 @@ export default function HiringEnquiryForm({
           ✕
         </button>
       )}
-      
+
       {status === "done" ? (
         <div className={`border-2 border-[#1a1a1a] bg-[#f5c518] p-10 text-center shadow-[8px_8px_0px_#1a1a1a] ${isPopup ? "mt-4" : ""}`}>
           <p className="font-mono text-xs uppercase tracking-widest text-[#1a1a1a]/60">
@@ -142,94 +142,94 @@ export default function HiringEnquiryForm({
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
-          {/* Company + contact name */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Company name *
-              </label>
-              <input required className={inputCls} placeholder="GENZCODEMY" value={form.company_name} onChange={set("company_name")} />
+            {/* Company + contact name */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Company name *
+                </label>
+                <input required className={inputCls} placeholder="GENZCODEMY" value={form.company_name} onChange={set("company_name")} />
+              </div>
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Your name *
+                </label>
+                <input required className={inputCls} placeholder="Gokul" value={form.contact_name} onChange={set("contact_name")} />
+              </div>
             </div>
-            <div>
-              <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Your name *
-              </label>
-              <input required className={inputCls} placeholder="Gokul" value={form.contact_name} onChange={set("contact_name")} />
-            </div>
-          </div>
 
-          {/* Email + phone */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Work email *
-              </label>
-              <input required type="email" className={inputCls} placeholder="connect@genzcodemy.com" value={form.email} onChange={set("email")} />
+            {/* Email + phone */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Work email *
+                </label>
+                <input required type="email" className={inputCls} placeholder="connect@genzcodemy.com" value={form.email} onChange={set("email")} />
+              </div>
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Phone
+                </label>
+                <input className={inputCls} placeholder="+91 **********" value={form.phone} onChange={set("phone")} />
+              </div>
             </div>
-            <div>
-              <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Phone
-              </label>
-              <input className={inputCls} placeholder="+91 **********" value={form.phone} onChange={set("phone")} />
-            </div>
-          </div>
 
-          {/* Role needed + headcount */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Role needed *
-              </label>
-              <select required className={inputCls} value={form.role_needed} onChange={set("role_needed")}>
-                <option value="">Select a role</option>
-                {ROLE_OPTIONS.map((r) => (
-                  <option key={r} value={r}>{r}</option>
-                ))}
-              </select>
+            {/* Role needed + headcount */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Role needed *
+                </label>
+                <select required className={inputCls} value={form.role_needed} onChange={set("role_needed")}>
+                  <option value="">Select a role</option>
+                  {ROLE_OPTIONS.map((r) => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
+                  Headcount *
+                </label>
+                <input
+                  required
+                  type="number"
+                  min="1"
+                  max="50"
+                  className={inputCls}
+                  placeholder="1"
+                  value={form.headcount}
+                  onChange={set("headcount")}
+                />
+              </div>
             </div>
+
+            {/* Message */}
             <div>
               <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-                Headcount *
+                Additional requirements
               </label>
-              <input
-                required
-                type="number"
-                min="1"
-                max="50"
+              <textarea
+                rows={4}
                 className={inputCls}
-                placeholder="1"
-                value={form.headcount}
-                onChange={set("headcount")}
+                placeholder="Tech stack, timeline, remote vs on-site, anything else..."
+                value={form.message}
+                onChange={set("message")}
               />
             </div>
-          </div>
 
-          {/* Message */}
-          <div>
-            <label className="mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-[#1a1a1a]/60">
-              Additional requirements
-            </label>
-            <textarea
-              rows={4}
-              className={inputCls}
-              placeholder="Tech stack, timeline, remote vs on-site, anything else..."
-              value={form.message}
-              onChange={set("message")}
-            />
-          </div>
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="w-full border-2 border-[#1a1a1a] bg-[#1a1a1a] px-6 py-4 font-bold text-white shadow-[6px_6px_0px_#f5c518] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none disabled:opacity-60"
+            >
+              {status === "loading" ? "Sending…" : "Send hiring enquiry →"}
+            </button>
 
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="w-full border-2 border-[#1a1a1a] bg-[#1a1a1a] px-6 py-4 font-bold text-white shadow-[6px_6px_0px_#f5c518] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none disabled:opacity-60"
-          >
-            {status === "loading" ? "Sending…" : "Send hiring enquiry →"}
-          </button>
-
-          {status === "error" && (
-            <p className="text-sm text-red-600">{errorMsg || "Something went wrong. Please try again."}</p>
-          )}
-        </form>
+            {status === "error" && (
+              <p className="text-sm text-red-600">{errorMsg || "Something went wrong. Please try again."}</p>
+            )}
+          </form>
         </>
       )}
     </div>

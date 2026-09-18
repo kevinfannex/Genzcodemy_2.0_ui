@@ -28,13 +28,13 @@ async function getAuthHeader(): Promise<Record<string, string>> {
 interface RequestOptions {
   method?: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
   body?: unknown;
-  auth?: boolean; // set false for public endpoints — skips the session lookup
+  auth?: boolean; // set false for public endpoints   skips the session lookup
 }
 
 /**
  * Every call the frontend makes to the backend goes through here.
  * This is the ONE place that changes if the response envelope,
- * base URL, or auth scheme ever shifts — components never call
+ * base URL, or auth scheme ever shifts   components never call
  * fetch() directly.
  */
 export async function apiRequest<T>(
@@ -61,7 +61,7 @@ export async function apiRequest<T>(
     try {
       parsed = await res.json();
     } catch {
-      // response wasn't JSON — fall through to generic error
+      // response wasn't JSON   fall through to generic error
     }
     throw new ApiRequestError(
       res.status,

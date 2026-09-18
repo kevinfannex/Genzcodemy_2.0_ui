@@ -115,33 +115,75 @@ const TESTIMONIALS = [
     role: "Python Full Stack Developer",
     initials: "VM",
     color: "#8b5cf6",
+  },
+  {
+    text: "The web development modules were top notch. It gave me real world confidence and got me a high-paying job.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_2.webp",
+    name: "Surya Prakash",
+    role: "Frontend Developer",
+    initials: "SP",
+    color: "#ff4a7e",
+  },
+  {
+    text: "I built several projects with Gen AI which definitely made my resume stand out among other freshers.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_1.avif",
+    name: "Preethi M",
+    role: "Full Stack Engineer",
+    initials: "PM",
+    color: "#38b2ac",
+  },
+  {
+    text: "Thanks to the intensive bootcamp, I cracked the interview at a top MNC without any prior tech background.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_4.jpg",
+    name: "Karthik Raja",
+    role: "Data Analyst",
+    initials: "KR",
+    color: "#f5c518",
+  },
+  {
+    text: "Awesome experience! Mentors are always available for doubt clearance and the curriculum is very up-to-date.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/girl_3.avif",
+    name: "Sneha V",
+    role: "Software Developer",
+    initials: "SV",
+    color: "#fb923c",
+  },
+  {
+    text: "The mock interviews and resume building sessions helped me understand what recruiters actually look for.",
+    image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_5.jpg",
+    name: "Ramesh Kannan",
+    role: "Backend Engineer",
+    initials: "RK",
+    color: "#c084fc",
   }
 ];
 
 // Scattered positions for avatars to make them look organic
 // These are percentages of the container width/height
 const SCATTER_POSITIONS = [
-   // Row 1
-  { x: 10, y: 20 },
-  { x: 38, y: 20 },
-  { x: 66, y: 20 },
-  { x: 92, y: 20 },
-
+  // Row 1
+  { x: 5, y: 15 },
+  { x: 25, y: 15 },
+  { x: 45, y: 15 },
+  { x: 65, y: 15 },
+  { x: 85, y: 15 },
   // Row 2
-  { x: 23, y: 40 },
-  { x: 51, y: 40 },
-  { x: 79, y: 40 },
-
+  { x: 15, y: 35 },
+  { x: 35, y: 35 },
+  { x: 55, y: 35 },
+  { x: 75, y: 35 },
+  { x: 95, y: 35 },
   // Row 3
-  { x: 8, y: 62 },
-  { x: 36, y: 62 },
-  { x: 64, y: 62 },
-  { x: 90, y: 62 },
-
+  { x: 5, y: 60 },
+  { x: 25, y: 60 },
+  { x: 45, y: 60 },
+  { x: 65, y: 60 },
+  { x: 85, y: 60 },
   // Row 4
-  { x: 22, y: 82 },
-  { x: 50, y: 82 },
-  { x: 78, y: 82 },
+  { x: 15, y: 85 },
+  { x: 35, y: 85 },
+  { x: 55, y: 85 },
+  { x: 75, y: 85 },
 ];
 
 type Testimonial = typeof TESTIMONIALS[0];
@@ -246,7 +288,7 @@ export default function SuccessStories() {
           className="mb-16 text-center"
         >
           <p className="mb-3 font-mono text-sm font-bold uppercase tracking-widest text-[#1a1a1a]/40">
-            // success_stories
+            {"// success_stories"}
           </p>
           <h2 className="text-4xl font-black text-[#1a1a1a] md:text-6xl leading-[1.05]">
             Students Who{" "}

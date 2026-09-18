@@ -50,7 +50,7 @@ const PROJECTS: Record<
   ],
 };
 
-// SVG placeholder — remove once real images are added
+// SVG placeholder   remove once real images are added
 function PlaceholderImg({ label }: { label: string }) {
   return (
     <div className="flex h-48 w-full items-center justify-center bg-[#f5f5f5]">
@@ -101,10 +101,10 @@ export default function WhatYoullBuild({ slug }: WhatYoullBuildProps) {
                   <PlaceholderImg label={p.title} />
                 ) : (
                   /* eslint-disable-next-line @next/next/no-img-element */
-                  <img 
-                    src={p.image} 
-                    alt={p.title} 
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" 
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 )}
               </div>

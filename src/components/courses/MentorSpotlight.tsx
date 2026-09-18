@@ -18,14 +18,14 @@
 //     name: "Santhosh R.",
 //     background: "Ex-Razorpay · 5 yrs data engineering",
 //     focus:
-//       "I focus on teaching you to ask the right question before you write a single line of SQL — that instinct is what separates analysts from reporters.",
+//       "I focus on teaching you to ask the right question before you write a single line of SQL   that instinct is what separates analysts from reporters.",
 //     photo: null,
 //   },
 //   "python-full-stack": {
 //     name: "Divya K.",
 //     background: "Ex-Meesho · 4 yrs backend & platform eng",
 //     focus:
-//       "We will ship something real together. Every concept I teach has a direct counterpart in the codebase you're building — no throwaway exercises.",
+//       "We will ship something real together. Every concept I teach has a direct counterpart in the codebase you're building   no throwaway exercises.",
 //     photo: null,
 //   },
 // };

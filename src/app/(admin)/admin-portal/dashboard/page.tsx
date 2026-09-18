@@ -33,7 +33,7 @@ export default function AdminDashboardPage() {
               {LABELS[key]}
             </p>
             <p className="mt-2 text-3xl font-black">
-              {stats ? stats[key] : "—"}
+              {stats ? stats[key] : " "}
             </p>
           </div>
         ))}

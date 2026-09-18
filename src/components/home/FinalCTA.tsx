@@ -56,7 +56,7 @@ export default function FinalCTA({ targetDate }: FinalCTAProps) {
         </h2>
 
         <p className="mx-auto mt-6 max-w-xl text-lg text-white/60">
-          Join the 2026 batch before seats close. Real projects, real mentors, real outcomes — or your money back.
+          Join the 2026 batch before seats close. Real projects, real mentors, real outcomes   or your money back.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -64,7 +64,7 @@ export default function FinalCTA({ targetDate }: FinalCTAProps) {
             onClick={handleEnrollClick}
             className="border-2 border-[#f5c518] bg-[#f5c518] px-8 py-4 text-lg font-black text-[#1a1a1a] shadow-[6px_6px_0px_#ffffff] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
           >
-            Enroll now — before it closes
+            Enroll now   before it closes
           </button>
         </div>
 

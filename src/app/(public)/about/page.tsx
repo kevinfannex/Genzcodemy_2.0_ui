@@ -8,7 +8,7 @@ import LowCommitmentCTA from "@/components/about/LowCommitmentCTA";
 export const metadata = {
   title: "About | Genzcodemy",
   description:
-    "How Genzcodemy was founded, who builds it, and why we teach people to ship — not memorise.",
+    "How Genzcodemy was founded, who builds it, and why we teach people to ship   not memorise.",
 };
 
 export default function AboutPage() {
@@ -37,7 +37,7 @@ export default function AboutPage() {
       {/* 2. Mission statement */}
       <MissionStatement />
 
-      
+
       {/* 4. Animated stats */}
       <StatsBand />
 

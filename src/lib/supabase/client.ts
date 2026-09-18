@@ -2,7 +2,7 @@ import { createBrowserClient } from "@supabase/ssr";
 
 /**
  * Supabase client for use in Client Components.
- * Only used for reading the session (auth state) — all data
+ * Only used for reading the session (auth state)   all data
  * reads/writes go through the backend API (see lib/api).
  */
 export function createClient() {

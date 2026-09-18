@@ -38,7 +38,7 @@ export default function EnrollButton({
   if (status === "done") {
     return (
       <p className="mt-4 font-bold text-green-700">
-        You&apos;re enrolled — check your dashboard.
+        You&apos;re enrolled   check your dashboard.
       </p>
     );
   }

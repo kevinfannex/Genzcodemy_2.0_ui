@@ -34,7 +34,7 @@ export default function ValuesChecklist() {
             fontFamily: "var(--font-gugi), sans-serif",
           }}
         >
-  GENZCODEMY         </p>
+          GENZCODEMY         </p>
       </motion.div>
 
       {/* ── DEVELOPER MICRO-LABELS ────────────────── */}
@@ -215,7 +215,7 @@ export default function ValuesChecklist() {
               transition={{ duration: 0.3, delay: i * 0.08 }}
               className="flex items-start gap-4 border-b-2 border-[#1a1a1a] px-6 py-4 last:border-b-0"
             >
-              {/* Yellow checkmark box — matches Study Plans card style */}
+              {/* Yellow checkmark box   matches Study Plans card style */}
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border-2 border-[#1a1a1a] bg-[#f5c518] text-xs font-black">
                 ✓
               </span>

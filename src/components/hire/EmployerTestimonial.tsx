@@ -3,7 +3,7 @@
 import { useState } from "react";
 import HiringEnquiryForm from "./HiringEnquiryForm";
 
-// No real employer testimonial exists yet — rendering an empty state instead of fabricating a quote.
+// No real employer testimonial exists yet   rendering an empty state instead of fabricating a quote.
 // TODO: Once a hiring partner provides a testimonial, replace this empty state with the real quote block.
 
 const HAS_REAL_TESTIMONIAL = false;
@@ -27,7 +27,7 @@ export default function EmployerTestimonial() {
               // BUILD_TEAMS.MD
             </p>
             <h3 className="mb-4 text-2xl font-extrabold text-[#1a1a1a]">
-             Build Your Team with Job-Ready Talent.
+              Build Your Team with Job-Ready Talent.
             </h3>
             <p className="mb-6 text-[#1a1a1a]/60">
               Skip contacting multiple agencies to find the right talent. Our platform offers a wide range of tech experts, allowing you to hire the perfect candidate instantly, all at no cost to you

@@ -38,7 +38,7 @@ export default function AdminFormsPage() {
         <p className="mt-6 text-[#1a1a1a]/60">Loading…</p>
       ) : forms.length === 0 ? (
         <p className="mt-6 border-2 border-dashed border-[#1a1a1a]/40 p-6 text-[#1a1a1a]/60">
-          No forms yet — create one to start collecting responses.
+          No forms yet   create one to start collecting responses.
         </p>
       ) : (
         <div className="mt-6 space-y-3">

@@ -4,8 +4,8 @@ import { useCurrency, type Currency } from "@/context/CurrencyContext";
 import { useState, useRef, useEffect } from "react";
 
 const OPTIONS: { value: Currency; flag: string; label: string; fullLabel: string; symbol: string }[] = [
-  { value: "INR", flag: "🇮🇳", label: "INR", fullLabel: "India — INR ₹", symbol: "₹" },
-  { value: "MYR", flag: "🇲🇾", label: "MYR", fullLabel: "Malaysia — MYR RM", symbol: "RM" },
+  { value: "INR", flag: "🇮🇳", label: "INR", fullLabel: "India   INR ₹", symbol: "₹" },
+  { value: "MYR", flag: "🇲🇾", label: "MYR", fullLabel: "Malaysia   MYR RM", symbol: "RM" },
 ];
 
 export default function CurrencyToggle() {
@@ -59,11 +59,10 @@ export default function CurrencyToggle() {
                   setCurrency(o.value);
                   setIsOpen(false);
                 }}
-                className={`flex w-full items-center gap-2 px-4 py-2.5 text-left font-mono text-xs font-bold transition-all cursor-pointer ${
-                  currency === o.value
+                className={`flex w-full items-center gap-2 px-4 py-2.5 text-left font-mono text-xs font-bold transition-all cursor-pointer ${currency === o.value
                     ? "bg-[#f5c518] text-[#1a1a1a]"
                     : "text-[#1a1a1a]/80 hover:bg-[#1a1a1a]/5 hover:text-[#1a1a1a]"
-                }`}
+                  }`}
                 type="button"
               >
                 <span className="text-base">{o.flag}</span>
