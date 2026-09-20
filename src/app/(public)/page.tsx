@@ -14,6 +14,7 @@ import FinalCTA from "@/components/home/FinalCTA";
 import CareerModal from "@/components/home/CareerModal";
 import Journey from "@/components/home/Journey";
 import Evidence from "@/components/home/Evidence";
+import FreeClassSection from "@/components/home/FreeClassSection";
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -68,8 +69,13 @@ export default function HomePage() {
       {/* 6. Build Log Demo   animated fake terminal */}
       {/* <BuildLogDemo /> */}
 
-      {/* 7. Final CTA   countdown + enroll button */}
+      {/* 7. Free Class Registration Form */}
+      <FreeClassSection />
+
+      {/* 8. Final CTA   countdown + enroll button */}
       <FinalCTA />
+
+
     </>
   );
 }
