@@ -14,6 +14,7 @@ import CurrencyToggle from "./CurrencyToggle";
 const NAV_LINKS = [
   // { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
+  { href: "/courses/how-it-works", label: "How it works" },
   { href: "/about", label: "About" },
   { href: "/hire-from-us", label: "Hire from us" },
   { href: "/contact", label: "Contact" },
