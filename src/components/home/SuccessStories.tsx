@@ -93,7 +93,7 @@ const TESTIMONIALS = [
     color: "#06b6d4",
   },
   {
-    text: "The Data Analytics sessions made SQL, Excel, and Power BI much easier to understand. The projects gave me something concrete to showcase during interviews.",
+    text: "The Data Analyst + Gen AI sessions made SQL, Excel, and Power BI much easier to understand. The projects gave me something concrete to showcase during interviews.",
     image: "https://ik.imagekit.io/g4lukt2ll/Genzcodemy/boy_6.jpg",
     name: "Rohit Kumar",
     role: "Associate Analyst",

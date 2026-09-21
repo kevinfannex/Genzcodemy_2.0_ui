@@ -7,45 +7,45 @@ import type { Variants } from "framer-motion";
 const STEPS = [
   {
     num: "01",
-    title: "WE FIND WHERE YOU ARE.",
+    title: "WE START WHERE YOU ARE.",
     description:
-      "A quick skill assessment tells us your starting point — no judgement, just clarity on what to build first.",
+      "A quick skill assessment tells We understand your current skills, background, and goals before deciding what comes next.",
   },
   {
     num: "02",
-    title: "WE GIVE YOU ONE PATH.",
+    title: "WE GIVE YOU A CLEAR PATH.",
     description:
-      "No more choosing between 50 tutorials. One structured curriculum, built around what companies actually hire for.",
+      "One structured roadmap instead of jumping between endless courses and tutorials.",
   },
   {
     num: "03",
-    title: "YOU LEARN BY DOING.",
+    title: "YOU LEARN BY BUILDING.",
     description:
-      "Live classes, real projects, weekly code reviews. You build things that go on your portfolio, not into the void.",
+      "Work on practical projects and real-world tasks so your skills go beyond theory.",
   },
   {
     num: "04",
     title: "WE TRACK YOUR PROGRESS.",
     description:
-      "Weekly check-ins and a progress dashboard. You always know where you stand and what to do next.",
+      "Track your progress, identify gaps, and know exactly what you need to work on next."
   },
   {
     num: "05",
-    title: "WE TRAIN YOU FOR INTERVIEWS.",
+    title: "WE PREPARE YOU FOR INTERVIEWS",
     description:
-      "Mock interviews, DSA prep, HR rounds — we drill every format until the real thing feels like practice.",
-  },
+      "Practice technical questions, projects, and interview situations before the real opportunity comes.",
+    },
   {
     num: "06",
-    title: "YOU ATTEND REAL DRIVES.",
+    title:" YOU GET REAL OPPORTUNITIES.",
     description:
-      "We connect you with our 50+ hiring partners. You walk into actual interviews with actual companies.",
+      "We connect you Put your preparation to the test through relevant hiring opportunities and interview drives.",
   },
   {
     num: "07",
-    title: "WE DON'T LEAVE YOU ALONE.",
+    title: "YOU DON'T HAVE TO FIGURE IT OUT ALONE.",
     description:
-      "12 months of career mentorship after the course. Resume reviews, job switches, salary negotiation — we're there.",
+      "12 months of From learning to interviews, you have guidance whenever you need to know what comes next.",
   },
 ];
 
@@ -134,15 +134,18 @@ export default function HiringSystem() {
             // THE SYSTEM
           </p>
           <h2 className="mb-5 text-3xl font-black leading-[1.1] tracking-tight text-[#1a1a1a] md:text-5xl lg:text-6xl">
-            How we get freshers{" "}
+            How we turn learners
+into{" "}
             <i className="not-italic text-[#f5c518] underline decoration-[#1a1a1a]/20">
-              hired.
-            </i>
+              job-ready
+            </i>{" "}
+            candidates.
           </h2>
           <p className="text-base font-medium leading-relaxed text-[#1a1a1a]/60 md:text-lg">
-            Seven steps. One path. Each step earns the next.
+No random tutorials. No guessing what to learn next.
+
             <br />
-            You always know where you are.
+Just a structured path that takes you from where you are to where you want to be.
           </p>
         </motion.div>
 

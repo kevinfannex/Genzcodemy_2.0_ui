@@ -190,7 +190,7 @@ export default function SavingsCalculator({
                     }`}
                     type="button"
                   >
-                    Data Analytics
+                    Data Analyst + Gen AI
                   </button>
                   <button
                     onClick={() => setSelectedCourse("fullstack")}

@@ -42,7 +42,7 @@ export default function JobReadyCTA() {
         {/* Yellow eyebrow */}
         <motion.div variants={fadeUp}>
           <span className="inline-block border-2 border-[#f5c518] bg-[#f5c518] px-4 py-1.5 font-mono text-[10px] font-black uppercase tracking-widest text-[#1a1a1a] shadow-[3px_3px_0px_#ffffff30]">
-            STILL SCARED?
+           STILL NOT SURE?
           </span>
         </motion.div>
 
@@ -51,24 +51,24 @@ export default function JobReadyCTA() {
           variants={fadeUp}
           className="mt-8 text-3xl font-black leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
         >
-          &ldquo;What if I{" "}
-          <i className="not-italic text-[#f5c518]">can&apos;t</i> do
-          it?&rdquo;
+          &ldquo;What if I'm {" "}
+          <i className="not-italic text-[#f5c518]">not good </i>
+          enough?&rdquo;
         </motion.h2>
 
         {/* Supporting text */}
         <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-xl">
           <p className="text-base leading-relaxed text-white/50 md:text-lg">
-            That&apos;s fair. Almost everyone feels it.
+            That's a normal place to start.
             <br />
-            The system is built for exactly that.
+          You don't need to have everything figured out before you begin.
           </p>
           <div className="mx-auto my-8 h-px w-16 bg-white/20" />
           <p className="text-base font-semibold leading-relaxed text-white/70 md:text-lg">
-            You don&apos;t get ready first, then start.
+          You don't become ready first.
             <br />
             <span className="text-[#f5c518]">
-              You start, and the system makes you ready.
+           You become ready by starting.
             </span>
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function JobReadyCTA() {
             onClick={handleRegister}
             className="border-2 border-[#f5c518] bg-[#f5c518] px-8 py-4 text-sm font-black text-[#1a1a1a] shadow-[6px_6px_0px_#ffffff20] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
           >
-            Register now →
+           Start my journey →
           </button>
           <Link
             href="/contact"
@@ -97,7 +97,7 @@ export default function JobReadyCTA() {
           variants={fadeUp}
           className="mt-8 font-mono text-xs text-white/25"
         >
-          No spam. Cancel anytime before batch starts.
+         No pressure. Just a conversation about where you are and what comes next.
         </motion.p>
       </motion.div>
     </section>

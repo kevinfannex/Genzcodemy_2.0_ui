@@ -63,20 +63,20 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden gap-8 md:flex items-center">
+        <nav className="hidden  md:flex items-center  ">
           {NAV_LINKS.map((link) => {
             if (link.label === "Courses") {
               return (
                 <div
                   key={link.href}
-                  className="relative py-2"
+                  className="relative gap-2 border-2 border-[#D3D3D3] rounded-full"
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onMouseLeave={() => setIsDropdownOpen(false)}
                 >
                   {/* Courses trigger */}
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-colors rounded-full ${
+                    className={`flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-colors rounded-full  ${
                       isDropdownOpen 
                         ? "bg-[#1a1a1a] text-white" 
                         : "text-[#1a1a1a]/80 hover:text-[#1a1a1a]"
@@ -112,7 +112,7 @@ export default function Header() {
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
                               </div>
                               <div>
-                                <h4 className="font-bold text-[#1a1a1a] transition-colors group-hover:text-[#f5c518]">Data Analyst</h4>
+                                <h4 className="font-bold text-[#1a1a1a] transition-colors group-hover:text-[#f5c518]">Data Analyst with genAI</h4>
                                 <p className="mt-1 text-sm font-medium text-[#1a1a1a]/60">Learn data analytics with real projects and Gen AI.</p>
                               </div>
                             </Link>

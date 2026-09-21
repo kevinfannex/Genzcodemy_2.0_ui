@@ -26,7 +26,7 @@ import { ApiRequestError } from "@/lib/api/client";
 import { useState, type FormEvent } from "react";
 
 const ROLE_OPTIONS = [
-  "Data Analyst",
+  "Data Analyst + Gen AI",
   "Python Full-Stack + Gen AI",
   "Others"
 ];

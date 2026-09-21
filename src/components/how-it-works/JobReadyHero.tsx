@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import type { Variants } from "framer-motion";
 import Link from "next/link";
 import { useAuthGate } from "@/components/auth/AuthGateModal";
 import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 /* ── Animation variants ── */
 const containerVariants: Variants = {
@@ -19,10 +20,40 @@ const fadeUp: Variants = {
 
 /* ── Stats data ── */
 const STATS = [
-  { value: "83%", label: "PLACEMENT RATE" },
-  { value: "2000+", label: "LEARNING PARTNERS" },
-  { value: "7", label: "STEPS TO OFFERS" },
+  { value: 90, suffix: "%", label: "PLACEMENT RATE" },
+  { value: 2000, suffix: "+", label: "LEARNING PARTNERS" },
+  { value: 7, suffix: "", label: "STEPS TO OFFERS" },
 ];
+
+function CountingStat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(0, value, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (v) => {
+          setDisplayValue(Math.floor(v));
+        }
+      });
+      return controls.stop;
+    }
+  }, [isInView, value]);
+
+  return (
+    <div ref={ref}>
+      <p className="text-2xl font-black text-[#1a1a1a] md:text-3xl">
+        {displayValue}{suffix}
+      </p>
+      <p className="mt-1 font-mono text-[9px] font-bold uppercase tracking-widest text-[#1a1a1a]/40 md:text-[10px]">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 /* ── Minimal editorial SVG illustration ── */
 function PathwayIllustration() {
@@ -183,18 +214,19 @@ export default function JobReadyHero() {
               variants={fadeUp}
               className="mb-5 font-mono text-[10px] font-bold uppercase tracking-widest text-[#1a1a1a]/50 md:text-xs"
             >
-              // THE JOB-READY SYSTEM
+              // THE JOB-READY PATH
             </motion.p>
 
             <motion.h1
               variants={fadeUp}
               className="text-4xl font-black leading-[1.05] tracking-tight text-[#1a1a1a] sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              From confusion to
+             From feeling stuck
+
               <br />
-              your first{" "}
+ to landing your {" "}
               <i className="not-italic text-[#f5c518] underline decoration-[#1a1a1a]/20 decoration-4 underline-offset-4">
-                offer.
+               first offer.
               </i>
             </motion.h1>
 
@@ -202,10 +234,9 @@ export default function JobReadyHero() {
               variants={fadeUp}
               className="mt-6 max-w-lg text-base font-medium leading-relaxed text-[#1a1a1a]/65 md:text-lg"
             >
-              You don&apos;t need more videos. You need a system.
+             You don&apos;t need another playlist of tutorials.
               <br />
-              Here&apos;s the whole road, from the day you register to the day an
-              offer letter lands in your hands.
+             You need a clear path, practical skills, and someone to guide you from learning to getting hired.
             </motion.p>
 
             {/* CTA buttons */}
@@ -214,13 +245,13 @@ export default function JobReadyHero() {
                 onClick={handleRegister}
                 className="border-2 border-[#1a1a1a] bg-[#f5c518] px-7 py-3.5 text-sm font-black text-[#1a1a1a] shadow-[4px_4px_0px_#1a1a1a] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
               >
-                Register now →
+                Start your journey →
               </button>
               <button
                 onClick={scrollToSystem}
                 className="border-2 border-[#1a1a1a] bg-white px-7 py-3.5 text-sm font-black text-[#1a1a1a] transition-all hover:bg-[#1a1a1a] hover:text-white"
               >
-                See the 7 steps →
+                See how it works →
               </button>
             </motion.div>
 
@@ -230,14 +261,7 @@ export default function JobReadyHero() {
               className="mt-14 flex gap-8 border-t-2 border-[#1a1a1a]/10 pt-8 md:gap-12"
             >
               {STATS.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-2xl font-black text-[#1a1a1a] md:text-3xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-1 font-mono text-[9px] font-bold uppercase tracking-widest text-[#1a1a1a]/40 md:text-[10px]">
-                    {stat.label}
-                  </p>
-                </div>
+                <CountingStat key={stat.label} value={stat.value} suffix={stat.suffix} label={stat.label} />
               ))}
             </motion.div>
           </div>

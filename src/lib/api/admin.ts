@@ -90,7 +90,7 @@ export const adminStudentsApi = {
       email: s ? s.email : "mock@example.com",
       phone: s ? s.phone : null,
       enrollments: [
-        { course_title: "Data Analytics", status: "active" as const }
+        { course_title: "Data Analyst + Gen AI", status: "active" as const }
       ],
       bookings: [],
       created_at: s ? s.created_at : new Date().toISOString(),

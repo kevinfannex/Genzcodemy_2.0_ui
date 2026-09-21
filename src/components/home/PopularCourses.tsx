@@ -12,10 +12,10 @@ const COURSES = [
     slug: "data-analytics",
     number: "01",
     tag: "MOST JOB OPENINGS",
-    title: "Data Analytics",
+    title: "Data Analyst + Gen AI",
     tech: "SQL · Python · Pandas · Power BI · Excel",
     build: "Build: end-to-end data dashboards",
-    footer: "DATA ANALYTICS",
+    footer: "DATA ANALYST + GEN AI",
   },
   {
     slug: "python-full-stack",

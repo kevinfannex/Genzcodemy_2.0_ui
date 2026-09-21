@@ -5,12 +5,12 @@ import type { Variants } from "framer-motion";
 
 /* ── Comparison data ── */
 const ROWS = [
-  { before: "Random videos", after: "One clear plan" },
-  { before: "Keep changing direction", after: "Practice daily" },
-  { before: "No idea what companies want", after: "Build real projects" },
-  { before: "Scared of interviews", after: "Prepared for them" },
-  { before: "Apply → no reply", after: "Attend real drives" },
-  { before: "Feel alone", after: "Always know your next step" },
+  { before: "Jumping between random videos", after:"Following one clear roadmap"},
+  { before: "Keep Learning without direction ", after: "Knowing what to learn next"},
+  { before: "Wondering what companies expect", after: "Building skills companies look for"},
+  { before: "Nervous about interviews", after: "Practising before the real thing"},
+  { before: "Applying and hearing nothing back", after:"Building a profile that gets noticed"},
+  { before: "figuring out all aline ", after:"Having someone to guide you forward"},
 ];
 
 /* ── Animation variants ── */
@@ -89,7 +89,9 @@ export default function BeforeAfter() {
                 >
                   <td className="border-2 border-[#1a1a1a] bg-white p-5 text-sm font-medium text-[#1a1a1a]/60">
                     <span className="flex items-center gap-3">
-                      <span className="inline-block h-2 w-2 shrink-0 border border-[#1a1a1a]/20 bg-[#1a1a1a]/10" />
+                      <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center border-2 border-grey  text-[8px] font-black leading-none">
+                      ✘
+                      </span>
                       {row.before}
                     </span>
                   </td>

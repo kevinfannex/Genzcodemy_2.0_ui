@@ -5,13 +5,14 @@ import type { Variants } from "framer-motion";
 
 /* ── Checklist data ── */
 const CHECKLIST = [
-  "You're a fresher chasing your first job",
-  "You're confused about what to learn",
+  "You're a fresher looking for your first tech job",
+  "You're unsure what skills to learn",
+  "You've learned a lot but still don't feel job-ready",
   "You're from a tier-2 / tier-3 college",
   "You're from a non-CS background",
-  "You've watched 100 videos and still feel stuck",
-  "You've applied and got no calls",
-  "Coding rounds and interviews scare you",
+  "You've watched countless tutorials but still feel stuck",
+  "You've applied to jobs but aren't getting enough calls",
+  
 ];
 
 /* ── Animation variants ── */
@@ -51,19 +52,21 @@ export default function AudienceChecklist() {
             className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start"
           >
             <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[#1a1a1a]/50 md:text-xs">
-              // IS THIS YOU?
-            </p>
+// THIS COULD BE YOU
+</p>
             <h2 className="mb-6 text-3xl font-black leading-[1.1] tracking-tight text-[#1a1a1a] md:text-5xl lg:text-6xl">
-              This is for you
+              You're closer
+              <br />
+              than you 
               <br />
               <i className="not-italic text-[#f5c518] underline decoration-[#1a1a1a]/20">
-                if...
+                 think...
               </i>
             </h2>
             <p className="max-w-sm text-base font-medium leading-relaxed text-[#1a1a1a]/60 md:text-lg">
-              You don&apos;t have to be ready.
+             Learn by doing. Keep moving forward.
               <br />
-              You just have to be serious.
+              Start small, learn fast, keep building.
             </p>
 
             {/* Decorative accent block */}

@@ -177,7 +177,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h3 className="font-bold text-white">Courses</h3>
               <div className="flex flex-col gap-3 text-sm text-white/70">
-                <Link href="/courses/data-analytics" className="transition-colors hover:text-[#f5c518]">Data Analytics</Link>
+                <Link href="/courses/data-analytics" className="transition-colors hover:text-[#f5c518]">Data Analyst + Gen AI</Link>
                 <Link href="/courses/python-full-stack" className="transition-colors hover:text-[#f5c518]">Python Full‑Stack + Gen AI</Link>
               </div>
             </div>

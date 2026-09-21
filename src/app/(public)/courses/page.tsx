@@ -14,7 +14,7 @@ const FALLBACK_COURSES: Course[] = [
   {
     id: "data-analytics",
     slug: "data-analytics",
-    title: "Data Analytics",
+    title: "Data Analyst + Gen AI",
     description: "SQL, Python, Pandas, Power BI  from raw data to decisions.",
     tools: ["Microsoft Excel", "SQL", "Power BI", "Power Query", "DAX"],
     duration_weeks: 12,

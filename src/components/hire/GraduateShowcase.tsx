@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +9,7 @@ export const GRADUATES = [
     id: "g1",
     initials: "A.M.",
     skills: ["Python", "SQL", "Pandas", "Power BI"],
-    track: "Data Analytics",
+    track: "Data Analyst + Gen AI",
     project: "Sales Churn Dashboard   Postgres + Power BI",
     thumbnail: null, // TODO: /portfolios/g1-thumbnail.png
     portfolioUrl: "#", // TODO: real GitHub/portfolio URL
@@ -27,7 +27,7 @@ export const GRADUATES = [
     id: "g3",
     initials: "P.S.",
     skills: ["Python", "SQL", "Seaborn", "Pandas"],
-    track: "Data Analytics",
+    track: "Data Analyst + Gen AI",
     project: "E-commerce KPI Report Automation   Python + Postgres",
     thumbnail: null,
     portfolioUrl: "#",

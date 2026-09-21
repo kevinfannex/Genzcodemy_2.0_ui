@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import GraduateShowcase, { GRADUATES } from "./GraduateShowcase";
 
-const FILTERS = ["Data Analytics", "Full Stack", "Both"] as const;
+const FILTERS = ["Data Analyst + Gen AI", "Full Stack", "Both"] as const;
 type Filter = (typeof FILTERS)[number];
 
 export default function SkillFilterTool() {
@@ -19,7 +19,7 @@ export default function SkillFilterTool() {
       ? GRADUATES
       : GRADUATES.filter((g) => {
         if (active.includes("Both")) return true;
-        if (active.includes("Data Analytics") && g.track === "Data Analytics") return true;
+        if (active.includes("Data Analyst + Gen AI") && g.track === "Data Analyst + Gen AI") return true;
         if (active.includes("Full Stack") && g.track === "Full Stack") return true;
         return false;
       });

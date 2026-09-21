@@ -98,7 +98,7 @@ export default function OriginStory() {
                     Gen AI
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#38b2ac]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
-                    Data Analytics
+                    Data Analyst + Gen AI
                   </span>{" "}
                   <span className="inline-block rounded-lg border-2 border-[#1a1a1a] bg-[#ff4a7e]/20 px-2 py-0.5 font-mono text-sm font-bold text-[#1a1a1a]">
                     Python Full Stack + Gen AI

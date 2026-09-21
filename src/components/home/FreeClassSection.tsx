@@ -61,7 +61,7 @@ const QUESTIONS = [
     label: "YOUR INTEREST",
     question: "What do you want to learn?",
     options: [
-      "Data Analytics",
+      "Data Analyst + Gen AI",
       "Python Full Stack",
       "Generative AI",
       "Web Development",
